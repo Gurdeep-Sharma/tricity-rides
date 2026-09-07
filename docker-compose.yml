@@ -1,0 +1,22 @@
+# Optional local MongoDB for development only.
+# Production should use a managed MongoDB (Atlas or equivalent) and set
+# DATABASE_URL accordingly.
+#
+# This is a standalone mongod, which is all Phase 1 needs: every write is a
+# single document. Multi-document transactions require a replica set, so if a
+# later phase introduces one, this service has to become a single-node replica
+# set (add `command: ["--replSet","rs0"]` and initiate it once).
+services:
+  db:
+    image: mongo:7
+    container_name: tricity_ride_db
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: tricity_ride
+    ports:
+      - "27017:27017"
+    volumes:
+      - tricity_ride_mongodata:/data/db
+
+volumes:
+  tricity_ride_mongodata:

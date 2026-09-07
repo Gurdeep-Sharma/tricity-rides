@@ -1,26 +1,258 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-strong: var(--secondary-strong);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --color-surface: var(--surface);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Brand palette — mirrored in src/config/brand.ts */
+  --background: #f8fafc;
+  --foreground: #17202a;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #17202a;
+  --popover: #ffffff;
+  --popover-foreground: #17202a;
+  --primary: #123b5d;
+  --primary-foreground: #ffffff;
+  --secondary: #0f8b8d;
+  --secondary-foreground: #ffffff;
+  /* Brand teal darkened for anything carrying text. The brand value above is
+     4.12:1 on white, which is fine for icons (3:1) but short of the 4.5:1 that
+     small text needs, in either direction. */
+  --secondary-strong: #0d7476;
+  --muted: #eef2f7;
+  /* slate-600: 4.5:1 on --background, unlike the lighter slate-400 */
+  --muted-foreground: #475569;
+  --accent: #f4b942;
+  --accent-foreground: #17202a;
+  --destructive: #c2410c;
+  --success: #15803d;
+  /* WhatsApp green, darkened until white text clears 4.5:1 (this is 5.96:1) */
+  --whatsapp: #0d7065;
+  --whatsapp-foreground: #ffffff;
+  --border: #dbe3ec;
+  --input: #cbd5e1;
+  --ring: #123b5d;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    /* Room for the mobile sticky CTA when jumping to anchors */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Body copy stays at 16px on mobile to avoid iOS zoom-on-focus */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    input,
+    select,
+    textarea {
+      font-size: 0.875rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading tracking-tight text-balance;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* ---------------------------------------------------------------
+     Motion
+     Entrance animations run once. Scroll reveals are driven by the
+     Reveal component, which adds .is-visible. Everything degrades to
+     "already visible" if JavaScript or the observer never runs, and
+     the reduced-motion block at the end of this file disables it all.
+     --------------------------------------------------------------- */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition:
+      opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Above-the-fold content animates on load rather than on scroll. */
+  .enter-up {
+    animation: enter-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+
+  .enter-fade {
+    animation: enter-fade 0.6s ease-out both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+
+  /* Card lift on hover: transform only, so no layout shift. */
+  .lift {
+    transition:
+      transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.22s ease-out,
+      border-color 0.2s ease-out;
+  }
+
+  .lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .shadow-card {
+    box-shadow:
+      0 1px 2px rgba(18, 59, 93, 0.06),
+      0 8px 24px -12px rgba(18, 59, 93, 0.18);
+  }
+
+  .shadow-float {
+    box-shadow:
+      0 2px 4px rgba(18, 59, 93, 0.06),
+      0 18px 48px -20px rgba(18, 59, 93, 0.35);
+  }
+
+  .shadow-header {
+    box-shadow: 0 6px 24px -12px rgba(18, 59, 93, 0.28);
+  }
+  /* Shared page container */
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  /* Long-form measure: ~68 characters */
+  .measure {
+    max-width: 68ch;
+  }
+
+  /* Clearance for the floating fixed header on pages without a hero */
+  .pt-header {
+    padding-top: 5.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .pt-header {
+      padding-top: 6.5rem;
+    }
+  }
+
+  /* Bottom padding so the mobile sticky CTA never covers page content */
+  .pb-sticky-cta {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+@keyframes enter-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes enter-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Very slow drift on the hero backdrop only. Decorative, so it is the
+   first thing dropped under reduced motion. */
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-3%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Nothing may start hidden or shifted when motion is reduced. */
+  .reveal,
+  .enter-up,
+  .enter-fade {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .lift:hover {
+    transform: none !important;
+  }
 }

@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+/// Lifecycle of an enquiry. Phase 1 only writes NEW; later phases move it forward.
+enum LeadStatus {
+  NEW
+  CONTACTED
+  VENDOR_CHECKING
+  QUOTE_SENT
+  CUSTOMER_ACCEPTED
+  CONVERTED
+  LOST
+  CANCELLED
+}
+
+enum TripType {
+  ONE_WAY
+  ROUND_TRIP
+  AIRPORT
+}
+
+model Lead {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Customer-facing reference, e.g. TR-7K3F9Q. Never expose the _id.
+  reference String @unique
+
+  // --- Trip -------------------------------------------------------------
+  pickupLocation String
+  dropLocation   String
+  /// ISO calendar date (YYYY-MM-DD) of the outbound journey.
+  journeyDate    String
+  /// HH:mm (24h) pickup time.
+  pickupTime     String
+  returnDate     DateTime? @db.Date
+  returnTime     String?
+  passengers     Int
+  vehicleType    String
+  tripType       TripType  @default(ONE_WAY)
+  luggage        String?
+  /// Slug of the route/service/location page the enquiry came from, if any.
+  routeSlug      String?
+
+  // --- Customer ---------------------------------------------------------
+  customerName    String
+  phoneNumber     String
+  whatsappNumber  String
+  email           String?
+  additionalNotes String?
+
+  // --- Attribution (first-touch, captured client-side) -------------------
+  source      String?
+  medium      String?
+  campaign    String?
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  utmTerm     String?
+  utmContent  String?
+  landingPage String?
+  referrer    String?
+
+  // --- Operations -------------------------------------------------------
+  status            LeadStatus @default(NEW)
+  notes             String?
+  whatsappClickedAt DateTime?
+  /// SHA-256 of the submitting IP; used for abuse investigation only.
+  ipHash            String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([phoneNumber, createdAt])
+  @@index([status, createdAt])
+}
