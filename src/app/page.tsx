@@ -34,7 +34,7 @@ import { businessConfig } from "@/config/business";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Tricity Ride | Outstation Taxi & Airport Cabs from Chandigarh",
+  title: "Tricity Rides | Outstation Taxi & Airport Cabs from Chandigarh",
   description:
     "Pre-booked outstation taxis and airport transfers from Chandigarh, Mohali and Zirakpur. One-way and round-trip cabs to Shimla, Manali, Delhi and more, with a confirmed quote on WhatsApp.",
   path: "/",
@@ -156,7 +156,7 @@ export default function HomePage() {
 
           <div className="space-y-6">
             <Reveal>
-              <h2 className="text-2xl font-bold md:text-3xl">Why Choose Tricity Ride?</h2>
+              <h2 className="text-2xl font-bold md:text-3xl">Why Choose Tricity Rides?</h2>
             </Reveal>
             <ul className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
               {whyPoints.map((point, index) => (

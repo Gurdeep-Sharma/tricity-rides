@@ -1,24 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
+
+import logoMark from "@/assets/tricity_rides_logo_icon.png";
 import { brandConfig } from "@/config/brand";
 import { cn } from "@/lib/utils";
 
-/** Mountain-road mark. A supplied logo asset can replace the SVG in place. */
-function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 44 34" className={cn("h-8 w-10", className)} aria-hidden="true">
-      <path d="M2 26 L14 8 L22 20 L27 13 L42 26 Z" fill="currentColor" opacity="0.9" />
-      <path d="M14 8 L18.5 14.75 L14 17 L9.5 14.75 Z" fill="#FFFFFF" opacity="0.55" />
-      <path
-        d="M1 30 C 12 30, 14 24, 24 24 C 34 24, 36 30, 43 30"
-        stroke="#F4B942"
-        strokeWidth="3"
-        strokeLinecap="round"
-        fill="none"
-      />
-    </svg>
-  );
-}
-
+/**
+ * Brand lockup: the supplied mark plus the wordmark as live text.
+ *
+ * The full logo file (tricity_rides_logo.png) carries its own wordmark, but it
+ * is a 2:1 lockup with a strapline that would be a few pixels tall inside a
+ * 64px header. Keeping the wordmark as text stays legible, scales with the
+ * user's font settings, and lets the footer flip to light type on the dark
+ * background.
+ */
 export function Logo({ tone = "dark" }: { tone?: "light" | "dark" }) {
   const light = tone === "light";
 
@@ -28,7 +23,24 @@ export function Logo({ tone = "dark" }: { tone?: "light" | "dark" }) {
       aria-label={`${brandConfig.name} — home`}
       className="group flex min-h-11 shrink-0 items-center gap-2.5 rounded-lg transition-opacity duration-200 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
     >
-      <LogoMark className={light ? "text-primary-foreground" : "text-primary"} />
+      {/* The mark's road and car are brand navy, which disappears against the
+          navy footer, so on dark backgrounds it sits on a light disc. */}
+      <span
+        className={cn(
+          "flex size-10 shrink-0 items-center justify-center",
+          light && "rounded-full bg-white/95 p-1"
+        )}
+      >
+        <Image
+          src={logoMark}
+          alt=""
+          aria-hidden="true"
+          width={40}
+          height={40}
+          priority
+          className="h-full w-full object-contain"
+        />
+      </span>
       <span className="flex flex-col leading-none">
         <span
           className={cn(
@@ -36,7 +48,7 @@ export function Logo({ tone = "dark" }: { tone?: "light" | "dark" }) {
             light ? "text-primary-foreground" : "text-primary"
           )}
         >
-          Tricity <span className={light ? "text-accent" : "text-secondary-strong"}>Ride</span>
+          Tricity <span className={light ? "text-accent" : "text-secondary-strong"}>Rides</span>
         </span>
         <span
           className={cn(

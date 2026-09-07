@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "How Tricity Ride collects and uses the information you provide when you send a taxi enquiry.",
+    "How Tricity Rides collects and uses the information you provide when you send a taxi enquiry.",
   path: "/privacy",
 });
 

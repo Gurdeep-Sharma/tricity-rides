@@ -103,7 +103,7 @@ export const services: ServicePage[] = [
     seo: {
       title: "Outstation Taxi from Chandigarh | One-Way & Round-Trip Cabs",
       description:
-        "Book an outstation taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi, Amritsar and more. One-way or round-trip with a confirmed quote from Tricity Ride.",
+        "Book an outstation taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi, Amritsar and more. One-way or round-trip with a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 1,
@@ -190,7 +190,7 @@ export const services: ServicePage[] = [
     seo: {
       title: "Chandigarh Airport Taxi | Airport Pickup & Drop Cabs",
       description:
-        "Pre-book a Chandigarh Airport taxi for pickup, drop or an onward transfer to Shimla, Manali or Kasauli. Driver details shared in advance by Tricity Ride.",
+        "Pre-book a Chandigarh Airport taxi for pickup, drop or an onward transfer to Shimla, Manali or Kasauli. Driver details shared in advance by Tricity Rides.",
     },
     active: true,
     priority: 2,
@@ -261,7 +261,7 @@ export const services: ServicePage[] = [
     seo: {
       title: "Local Taxi in Chandigarh Tricity | Half-Day & Full-Day Hire",
       description:
-        "Book a local taxi in Chandigarh, Mohali, Zirakpur or Panchkula for half-day or full-day hire with waiting included. Confirmed quote from Tricity Ride.",
+        "Book a local taxi in Chandigarh, Mohali, Zirakpur or Panchkula for half-day or full-day hire with waiting included. Confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 3,
@@ -337,7 +337,7 @@ export const services: ServicePage[] = [
     seo: {
       title: "One-Way Taxi from Chandigarh | Single-Direction Drops",
       description:
-        "Book a one-way taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi and more. Single-direction pricing with a confirmed quote from Tricity Ride.",
+        "Book a one-way taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi and more. Single-direction pricing with a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 4,

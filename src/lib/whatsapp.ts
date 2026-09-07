@@ -28,7 +28,7 @@ export function buildWhatsAppUrl(message: string, numberDigits?: string): string
  */
 export function buildLeadWhatsAppMessage(lead: WhatsAppLeadSummary): string {
   const lines: string[] = [
-    "Hi Tricity Ride, I just submitted a taxi enquiry.",
+    "Hi Tricity Rides, I just submitted a taxi enquiry.",
     "",
     `Reference: ${lead.reference}`,
     `Trip type: ${formatTripType(lead.tripType)}`,
@@ -66,7 +66,7 @@ export function buildLeadWhatsAppUrl(lead: WhatsAppLeadSummary, numberDigits?: s
  */
 export function buildEnquiryWhatsAppUrl(context?: string): string {
   const message = context
-    ? `Hi Tricity Ride, I'd like a taxi quote for ${context}. Could you share the fare and vehicle options?`
-    : "Hi Tricity Ride, I'd like a taxi quote. Could you share the fare and vehicle options?";
+    ? `Hi Tricity Rides, I'd like a taxi quote for ${context}. Could you share the fare and vehicle options?`
+    : "Hi Tricity Rides, I'd like a taxi quote. Could you share the fare and vehicle options?";
   return buildWhatsAppUrl(message);
 }

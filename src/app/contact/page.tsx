@@ -17,7 +17,7 @@ import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Contact Us | Taxi Enquiries from Chandigarh",
   description:
-    "Call or WhatsApp Tricity Ride for outstation taxis and airport transfers from Chandigarh, Mohali and Zirakpur. Enquiry hours and contact details.",
+    "Call or WhatsApp Tricity Rides for outstation taxis and airport transfers from Chandigarh, Mohali and Zirakpur. Enquiry hours and contact details.",
   path: "/contact",
 });
 
@@ -36,7 +36,7 @@ export default function ContactPage() {
           <Breadcrumbs items={crumbs} />
           <div className="mt-6 space-y-4">
             <h1 className="text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
-              Contact Tricity Ride
+              Contact Tricity Rides
             </h1>
             <p className="measure text-lg text-primary-foreground/90">
               WhatsApp is the quickest way to reach us. Send your route and dates and a

@@ -2,7 +2,7 @@
 
 ## Shape
 
-Tricity Ride is a **single Next.js application**. There is no separate backend
+Tricity Rides is a **single Next.js application**. There is no separate backend
 service, no second package.json and no second deployment.
 
 ```

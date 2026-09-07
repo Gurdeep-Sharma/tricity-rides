@@ -27,7 +27,7 @@ const phone = orFallback(process.env.NEXT_PUBLIC_PHONE_NUMBER, BUSINESS_NUMBER);
 const whatsapp = orFallback(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER, phone);
 const email = orFallback(
   process.env.NEXT_PUBLIC_BUSINESS_EMAIL,
-  "booking@tricityride.com"
+  "tricityrides.info@gmail.com"
 );
 
 /** Digits only, for wa.me links (e.g. 919876543210). */
@@ -46,7 +46,7 @@ function formatIndianPhone(e164: string): string {
 }
 
 export const businessConfig = {
-  legalName: "Tricity Ride",
+  legalName: "Tricity Rides",
   /** Service-area business: no walk-in office address is published. */
   serviceAreas: [
     { name: "Chandigarh", slug: "chandigarh-taxi" },

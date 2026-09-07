@@ -39,7 +39,7 @@ facts appear everywhere.
 
 | Question | Answer given on the site |
 |---|---|
-| Who | Tricity Ride |
+| Who | Tricity Rides |
 | Where | Chandigarh, Mohali, Zirakpur, including Chandigarh Airport |
 | What | Outstation taxis, airport transfers, one-way and round-trip private cabs |
 | To | Shimla, Manali, Delhi, Amritsar, Dharamshala, Dehradun, Haridwar, Rishikesh, Jaipur, Kasauli |
@@ -48,8 +48,9 @@ facts appear everywhere.
 
 ## Entity consistency
 
-The brand is written **Tricity Ride** everywhere. No page uses Tricity Cab,
-Tricity Cabs, Tricity Taxi or Tricity Rides. Location pages use the real area
+The brand is written **Tricity Rides** everywhere, matching the logo. No page
+uses the singular Tricity Ride, nor Tricity Cab, Tricity Cabs or Tricity Taxi.
+Location pages use the real area
 names people search and travel from: Chandigarh sectors, Mohali phases and
 Aerocity, Zirakpur's VIP Road and Dhakoli.
 

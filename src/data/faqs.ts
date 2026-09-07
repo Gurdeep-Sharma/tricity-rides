@@ -3,7 +3,7 @@ import type { Faq } from "@/data/types";
 /** Site-level FAQs shown on the homepage. Route pages carry their own. */
 export const homeFaqs: Faq[] = [
   {
-    question: "How do I book a taxi with Tricity Ride?",
+    question: "How do I book a taxi with Tricity Rides?",
     answer:
       "Send your trip details through the enquiry form on this site. We reply on WhatsApp with the fare and vehicle options, and the trip is confirmed once you accept. You can also call us directly if you prefer.",
   },

@@ -1,4 +1,4 @@
-# Tricity Ride
+# Tricity Rides
 
 Lead-generation website for outstation taxis and airport transfers from
 Chandigarh, Mohali and Zirakpur.

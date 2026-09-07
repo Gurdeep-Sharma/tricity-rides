@@ -1,10 +1,10 @@
 /**
- * Brand identity for Tricity Ride.
+ * Brand identity for Tricity Rides.
  * Colours are mirrored as CSS variables in src/app/globals.css — keep both in sync.
  * Contact details live in src/config/business.ts (single source of NAP data).
  */
 export const brandConfig = {
-  name: "Tricity Ride",
+  name: "Tricity Rides",
   tagline: "Reliable outstation cabs from Chandigarh Tricity",
   description:
     "Pre-booked outstation taxis and airport transfers from Chandigarh, Mohali and Zirakpur. One-way and round-trip cabs with a confirmed quote and WhatsApp support.",

@@ -21,7 +21,7 @@ const ogImage = {
   url: absoluteUrl("/opengraph-image"),
   width: 1200,
   height: 630,
-  alt: "Tricity Ride — outstation taxis and airport cabs from Chandigarh",
+  alt: "Tricity Rides — outstation taxis and airport cabs from Chandigarh",
 };
 
 export function buildMetadata({

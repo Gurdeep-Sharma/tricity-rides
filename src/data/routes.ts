@@ -230,7 +230,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Manali Taxi | Private Cab via Mandi & Kullu",
       description:
-        "Book a Chandigarh to Manali taxi for one-way or round-trip travel, including overnight departures. Pickup across Tricity and a confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Manali taxi for one-way or round-trip travel, including overnight departures. Pickup across Tricity and a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 2,
@@ -318,7 +318,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Delhi Taxi | Airport & City Drops",
       description:
-        "Book a Chandigarh to Delhi taxi for one-way or return travel, including IGI Airport terminal drops. Pickup across Tricity with a confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Delhi taxi for one-way or return travel, including IGI Airport terminal drops. Pickup across Tricity with a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 3,
@@ -492,7 +492,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Dharamshala Taxi | McLeod Ganj Cabs",
       description:
-        "Book a Chandigarh to Dharamshala or McLeod Ganj taxi, one-way or round-trip. Pickup from Chandigarh, Mohali and Zirakpur with a confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Dharamshala or McLeod Ganj taxi, one-way or round-trip. Pickup from Chandigarh, Mohali and Zirakpur with a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 5,
@@ -579,7 +579,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Dehradun Taxi | Dehradun & Mussoorie Cabs",
       description:
-        "Book a Chandigarh to Dehradun taxi for one-way or return travel, with Mussoorie and Jolly Grant Airport drops. Confirmed quote and WhatsApp support from Tricity Ride.",
+        "Book a Chandigarh to Dehradun taxi for one-way or return travel, with Mussoorie and Jolly Grant Airport drops. Confirmed quote and WhatsApp support from Tricity Rides.",
     },
     active: true,
     priority: 6,
@@ -666,7 +666,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Haridwar Taxi | Har Ki Pauri Trips",
       description:
-        "Book a Chandigarh to Haridwar taxi planned around the evening Ganga Aarti. One-way or round-trip, pickup across Tricity, confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Haridwar taxi planned around the evening Ganga Aarti. One-way or round-trip, pickup across Tricity, confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 7,
@@ -753,7 +753,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Rishikesh Taxi | One-Way & Round-Trip Cabs",
       description:
-        "Book a Chandigarh to Rishikesh taxi for camps, ashrams, rafting or a Char Dham start. Pickup across Tricity and a confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Rishikesh taxi for camps, ashrams, rafting or a Char Dham start. Pickup across Tricity and a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 8,
@@ -840,7 +840,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Jaipur Taxi | Long-Distance Private Cab",
       description:
-        "Book a Chandigarh to Jaipur taxi as a one-way drop or multi-day round trip. Pickup across Tricity, driver allowance stated upfront, confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Jaipur taxi as a one-way drop or multi-day round trip. Pickup across Tricity, driver allowance stated upfront, confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 9,
@@ -927,7 +927,7 @@ export const routes: RouteData[] = [
     seo: {
       title: "Chandigarh to Kasauli Taxi | Day Trip & Drop Cabs",
       description:
-        "Book a Chandigarh to Kasauli taxi as a day trip with waiting or a one-way drop. Pickup from Chandigarh, Mohali, Zirakpur and Panchkula. Confirmed quote from Tricity Ride.",
+        "Book a Chandigarh to Kasauli taxi as a day trip with waiting or a one-way drop. Pickup from Chandigarh, Mohali, Zirakpur and Panchkula. Confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 10,

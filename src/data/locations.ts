@@ -98,7 +98,7 @@ export const locations: LocationPage[] = [
     seo: {
       title: "Taxi Service in Chandigarh | Outstation, Airport & Local Cabs",
       description:
-        "Book a taxi in Chandigarh for outstation trips, airport transfers or full-day local hire. Pickup from any sector with a confirmed quote from Tricity Ride.",
+        "Book a taxi in Chandigarh for outstation trips, airport transfers or full-day local hire. Pickup from any sector with a confirmed quote from Tricity Rides.",
     },
     active: true,
     priority: 1,

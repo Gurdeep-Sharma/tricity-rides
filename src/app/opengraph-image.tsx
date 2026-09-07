@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { brandConfig } from "@/config/brand";
 
-export const alt = "Tricity Ride — outstation taxis and airport cabs from Chandigarh";
+export const alt = "Tricity Rides — outstation taxis and airport cabs from Chandigarh";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

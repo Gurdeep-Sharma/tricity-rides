@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Terms of Service",
   description:
-    "Terms of service for Tricity Ride taxi enquiries and bookings from Chandigarh, Mohali and Zirakpur.",
+    "Terms of service for Tricity Rides taxi enquiries and bookings from Chandigarh, Mohali and Zirakpur.",
   path: "/terms",
 });
 
