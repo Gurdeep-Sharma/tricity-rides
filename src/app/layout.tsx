@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Analytics, AttributionCapture } from "@/components/analytics/Analytics";
 import { organizationJsonLd } from "@/lib/seo";
@@ -61,11 +62,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         >
           Skip to content
         </a>
-        <Header />
+        <SiteChrome>
+          <Header />
+        </SiteChrome>
         <div id="main-content" className="flex flex-1 flex-col">
           {children}
         </div>
-        <Footer />
+        <SiteChrome>
+          <Footer />
+        </SiteChrome>
         <AttributionCapture />
         <Analytics />
       </body>
