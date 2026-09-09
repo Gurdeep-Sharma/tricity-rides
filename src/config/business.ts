@@ -52,8 +52,10 @@ export const businessConfig = {
     { name: "Chandigarh", slug: "chandigarh-taxi" },
     { name: "Mohali", slug: "mohali-taxi" },
     { name: "Zirakpur", slug: "zirakpur-taxi" },
+    { name: "Panchkula", slug: "panchkula-taxi" },
+    { name: "Kharar", slug: "kharar-taxi" },
   ],
-  serviceAreaLabel: "Chandigarh, Mohali and Zirakpur",
+  serviceAreaLabel: "Chandigarh, Mohali, Zirakpur, Panchkula and Kharar",
   airport: {
     name: "Shaheed Bhagat Singh International Airport, Chandigarh",
     shortName: "Chandigarh Airport",
@@ -105,7 +107,8 @@ export const businessConfig = {
       "Vehicle and driver for the agreed itinerary",
       "Fuel for the quoted route",
       "Driver allowance for the quoted days (round trips)",
-      "Pickup from your address in Chandigarh, Mohali or Zirakpur",
+      "Pickup from your address anywhere in Tricity — Chandigarh, Mohali, Zirakpur, Panchkula or Kharar",
+      "Additional pickups on or near the route, at no extra charge",
     ],
     extras: [
       "Tolls and state entry taxes (quoted as included or actuals, always stated in writing)",
