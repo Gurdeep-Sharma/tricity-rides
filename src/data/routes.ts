@@ -18,6 +18,7 @@ import kufriPhoto from "@/assets/images/kufri.webp";
 import dalhousiePhoto from "@/assets/images/dalhausie.webp";
 import palampurPhoto from "@/assets/images/palampur.webp";
 import chambaPhoto from "@/assets/images/chamba.webp";
+import mussooriePhoto from "@/assets/images/mussoorie.webp";
 
 export interface RouteData extends BasePage {
   origin: string;
@@ -100,12 +101,17 @@ export const routes: RouteData[] = [
       "In winter, snow near Kufri and Fagu can close or slow the higher roads. We confirm road conditions with drivers on the route before a winter departure.",
     ],
     pickupNotes:
-      "Pickup is from your address in Chandigarh, Mohali, Zirakpur or Panchkula. If you are landing at Chandigarh Airport, share the flight number when you enquire so the pickup time matches your arrival.",
+      "Pickup is from your address in Chandigarh, Mohali, Zirakpur or Panchkula. If you are landing at Chandigarh Airport, share the flight number when you enquire so the pickup time matches your arrival. A Mohali to Shimla, Zirakpur to Shimla or Panchkula to Shimla trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long does a Chandigarh to Shimla taxi take?",
+        question: "How far is Shimla from Chandigarh?",
         answer:
-          "Usually three and a half to four and a half hours for about 115 km, excluding meal stops. Traffic on the Kalka–Solan climb and weekend rush are the main reasons a trip runs longer.",
+          "About 115 km, usually three and a half to four and a half hours excluding meal stops. Traffic on the Kalka–Solan climb and the weekend rush are the main reasons a trip runs longer.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Shimla?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "How much does a Chandigarh to Shimla taxi cost?",
@@ -193,12 +199,17 @@ export const routes: RouteData[] = [
       "In winter the road beyond Manali may be closed or restricted to certain vehicles. Snow chains and road status are checked before any Gulaba or Solang plan.",
     ],
     pickupNotes:
-      "Because of the length of this drive, we fix the pickup time carefully. Overnight departures are picked up from your address in Chandigarh, Mohali, Zirakpur or Panchkula.",
+      "Because of the length of this drive, we fix the pickup time carefully. Overnight departures are picked up from your address in Chandigarh, Mohali, Zirakpur or Panchkula. A Mohali to Manali, Zirakpur to Manali or Panchkula to Manali trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long is the Chandigarh to Manali taxi journey?",
+        question: "How far is Manali from Chandigarh?",
         answer:
           "About 310 km, usually eight to nine and a half hours including short breaks. Monsoon conditions between Mandi and Kullu are the most common reason for a longer run.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Manali?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Is an overnight Chandigarh to Manali taxi possible?",
@@ -281,12 +292,17 @@ export const routes: RouteData[] = [
       "Same-day returns are possible, and are quoted as a round trip so the same vehicle waits for you.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Chandigarh, Mohali, Zirakpur or Panchkula. For flights out of Delhi we suggest a pickup time that keeps a buffer for highway traffic.",
+      "Pickup from anywhere in Chandigarh, Mohali, Zirakpur or Panchkula. For flights out of Delhi we suggest a pickup time that keeps a buffer for highway traffic. A Mohali to Delhi, Zirakpur to Delhi or Panchkula to Delhi trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long does a Chandigarh to Delhi taxi take?",
+        question: "How far is Delhi from Chandigarh?",
         answer:
-          "About four and a half to five hours for the highway run, and up to six for central Delhi, Gurugram or Noida in peak traffic.",
+          "About 250 km, usually four and a half to five hours for the highway run, and up to six for central Delhi, Gurugram or Noida in peak traffic.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Delhi?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can the taxi drop me at Delhi IGI Airport?",
@@ -368,12 +384,17 @@ export const routes: RouteData[] = [
       "If you want to add Anandpur Sahib or Tarn Taran to the itinerary, tell us at the enquiry stage so the extra running is in the quote.",
     ],
     pickupNotes:
-      "Pickup from Chandigarh, Mohali, Kharar, Zirakpur or Panchkula. Kharar pickups join the Ludhiana highway almost immediately.",
+      "Pickup from Chandigarh, Mohali, Kharar, Zirakpur or Panchkula. Kharar pickups join the Ludhiana highway almost immediately. A Mohali to Amritsar, Zirakpur to Amritsar or Panchkula to Amritsar trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long does Chandigarh to Amritsar take by taxi?",
+        question: "How far is Amritsar from Chandigarh?",
         answer:
-          "About four and a half to five and a half hours for roughly 230 km, longer in winter fog on the Ludhiana–Jalandhar section.",
+          "About 230 km, usually four and a half to five and a half hours, longer in winter fog on the Ludhiana–Jalandhar section.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Amritsar?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can we do Golden Temple and Wagah in one day from Chandigarh?",
@@ -455,12 +476,17 @@ export const routes: RouteData[] = [
       "If your hotel is in upper McLeod Ganj or Dharamkot, the vehicle may not be able to reach the door. We will tell you in advance rather than at drop-off.",
     ],
     pickupNotes:
-      "Pickup from Chandigarh, Mohali, Kharar, Zirakpur or Panchkula. Mention whether you are staying in Dharamshala town or McLeod Ganj so the arrival is planned properly.",
+      "Pickup from Chandigarh, Mohali, Kharar, Zirakpur or Panchkula. Mention whether you are staying in Dharamshala town or McLeod Ganj so the arrival is planned properly. A Mohali to Dharamshala, Zirakpur to Dharamshala or Panchkula to Dharamshala trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long is the Chandigarh to Dharamshala taxi journey?",
+        question: "How far is Dharamshala from Chandigarh?",
         answer:
           "About 250 km and typically five and a half to seven hours, depending on traffic through Una and the climb into the Kangra valley.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Dharamshala?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can the taxi drop me directly at McLeod Ganj?",
@@ -542,12 +568,17 @@ export const routes: RouteData[] = [
       "Same-day returns to Chandigarh are common on this route and are quoted as a round trip with the vehicle waiting.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Zirakpur and Panchkula pickups join the Ambala road quickly, which helps on early departures.",
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula pickups join the Ambala road quickly, which helps on early departures. A Mohali to Dehradun, Zirakpur to Dehradun or Panchkula to Dehradun trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long does Chandigarh to Dehradun take by cab?",
+        question: "How far is Dehradun from Chandigarh?",
         answer:
-          "About four to five hours for roughly 175 km. Saharanpur town traffic is the most common reason for the longer end of that range.",
+          "About 175 km, usually four to five hours. Saharanpur town traffic is the most common reason for the longer end of that range.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Dehradun?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can the taxi continue to Mussoorie?",
@@ -629,12 +660,17 @@ export const routes: RouteData[] = [
       "If you plan to continue to Rishikesh, keeping the same vehicle on a round trip is simpler than arranging local transport there.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Morning departures work best if you want to reach in time for the evening aarti without a rushed drive.",
+      "Pickup from anywhere in Tricity. Morning departures work best if you want to reach in time for the evening aarti without a rushed drive. A Mohali to Haridwar, Zirakpur to Haridwar or Panchkula to Haridwar trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long is the Chandigarh to Haridwar taxi journey?",
+        question: "How far is Haridwar from Chandigarh?",
         answer:
           "About 200 km and typically four and a half to five and a half hours, longer during Kanwar season and major festival periods.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Haridwar?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can the taxi drop me near Har Ki Pauri?",
@@ -716,12 +752,17 @@ export const routes: RouteData[] = [
       "Traffic through Haridwar affects this route too, particularly during festival periods.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. For a morning rafting slot or a Char Dham start, an early departure is usually necessary.",
+      "Pickup from anywhere in Tricity. For a morning rafting slot or a Char Dham start, an early departure is usually necessary. A Mohali to Rishikesh, Zirakpur to Rishikesh or Panchkula to Rishikesh trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long does Chandigarh to Rishikesh take by taxi?",
+        question: "How far is Rishikesh from Chandigarh?",
         answer:
-          "About five to six hours for roughly 225 km, following the Haridwar route and continuing along the river.",
+          "About 225 km, usually five to six hours, following the Haridwar route and continuing along the river.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Rishikesh?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can the cab drop me at a riverside camp or ashram?",
@@ -803,12 +844,17 @@ export const routes: RouteData[] = [
       "If you want to break the journey overnight, tell us and we will plan a sensible stop rather than pushing the whole distance in one day.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity, usually before dawn so the Delhi stretch is crossed before peak traffic.",
+      "Pickup from anywhere in Tricity, usually before dawn so the Delhi stretch is crossed before peak traffic. A Mohali to Jaipur, Zirakpur to Jaipur or Panchkula to Jaipur trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How long does a Chandigarh to Jaipur taxi take?",
+        question: "How far is Jaipur from Chandigarh?",
         answer:
-          "About nine to eleven hours for roughly 520 km, including breaks. Traffic around the Delhi region is the main variable.",
+          "About 520 km, usually nine to eleven hours including breaks. Traffic around the Delhi region is the main variable.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Jaipur?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Is a same-day return to Chandigarh possible?",
@@ -890,12 +936,17 @@ export const routes: RouteData[] = [
       "Kasauli also works as a short break on the way to Shimla. Tell us if you want it added and it goes into the itinerary.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Zirakpur and Panchkula are closest to the Kalka road, so those pickups reach Kasauli quickest.",
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula are closest to the Kalka road, so those pickups reach Kasauli quickest. A Mohali to Kasauli, Zirakpur to Kasauli or Panchkula to Kasauli trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How far is Kasauli from Chandigarh by taxi?",
+        question: "How far is Kasauli from Chandigarh?",
         answer:
           "About 65 km, usually an hour and a half to two and a half hours depending on the weekend traffic on the Parwanoo climb.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Kasauli?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Is a Chandigarh to Kasauli day trip practical?",
@@ -981,12 +1032,17 @@ export const routes: RouteData[] = [
       "Most people pair Kufri with Shimla, and often with the Green Valley viewpoint on the way. Tell us the stops you want and they go into the itinerary.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Zirakpur and Panchkula sit closest to the Kalka road, so those pickups reach the hills first.",
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula sit closest to the Kalka road, so those pickups reach the hills first. A Mohali to Kufri, Zirakpur to Kufri or Panchkula to Kufri trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How far is Kufri from Chandigarh by taxi?",
+        question: "How far is Kufri from Chandigarh?",
         answer:
           "About 130 km, usually four to five hours each way. Kufri is roughly 15 km beyond Shimla, so it is the Shimla drive plus a short climb.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Kufri?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can I do Chandigarh to Kufri in a day?",
@@ -1072,12 +1128,17 @@ export const routes: RouteData[] = [
       "The town is spread across several hills, so a vehicle for local running is genuinely useful once you arrive, unlike a compact town such as Kasauli.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Mohali and Kharar sit closest to the Ropar road and reach the highway soonest, which helps on a long day.",
+      "Pickup from anywhere in Tricity. Mohali and Kharar sit closest to the Ropar road and reach the highway soonest, which helps on a long day. A Mohali to Dalhousie, Zirakpur to Dalhousie or Panchkula to Dalhousie trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How far is Dalhousie from Chandigarh by taxi?",
+        question: "How far is Dalhousie from Chandigarh?",
         answer:
           "About 320 km, usually seven to eight and a half hours by road via Ropar, Hoshiarpur, Pathankot and Banikhet, excluding stops.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Dalhousie?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can I do Chandigarh to Dalhousie and back in one day?",
@@ -1163,12 +1224,17 @@ export const routes: RouteData[] = [
       "The valley roads are narrow in places once you leave the main highway. An SUV is more comfortable for a group, though a sedan handles the route without difficulty.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Mohali and Kharar reach the Ropar road quickest, which matters on a six to seven hour drive.",
+      "Pickup from anywhere in Tricity. Mohali and Kharar reach the Ropar road quickest, which matters on a six to seven hour drive. A Mohali to Palampur, Zirakpur to Palampur or Panchkula to Palampur trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How far is Palampur from Chandigarh by taxi?",
+        question: "How far is Palampur from Chandigarh?",
         answer:
           "About 255 km, usually six to seven hours by road through Ropar, Una and Hamirpur into the Kangra valley, excluding stops.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Palampur?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can I visit Palampur and Dharamshala on the same trip?",
@@ -1254,12 +1320,17 @@ export const routes: RouteData[] = [
       "For the upper valley towards Bharmour and Manimahesh, road conditions vary a great deal by season. Tell us how far up you plan to go so we can advise on the vehicle honestly.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity, and an early start is worth arranging on this route. Mohali and Kharar reach the Ropar road quickest.",
+      "Pickup from anywhere in Tricity, and an early start is worth arranging on this route. Mohali and Kharar reach the Ropar road quickest. A Mohali to Chamba, Zirakpur to Chamba or Panchkula to Chamba trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How far is Chamba from Chandigarh by taxi?",
+        question: "How far is Chamba from Chandigarh?",
         answer:
           "About 355 km, usually eight to nine and a half hours via Pathankot and Banikhet, excluding stops. The last two hours are hill road.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Chamba?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Can Chandigarh to Chamba be done in one day?",
@@ -1305,6 +1376,10 @@ export const routes: RouteData[] = [
   // ------------------------------------------------------------- Mussoorie
   {
     slug: "chandigarh-to-mussoorie-taxi",
+    image: {
+      src: mussooriePhoto,
+      alt: "A waterfall dropping in several strands into a green pool near Mussoorie, with viewing platforms and forested hillside alongside",
+    },
     motif: "hill-town",
     origin: "Chandigarh",
     destination: "Mussoorie",
@@ -1341,12 +1416,17 @@ export const routes: RouteData[] = [
       "Mussoorie pairs naturally with Dehradun, and with Haridwar or Rishikesh over a longer trip. Tell us the stops and they go into the itinerary.",
     ],
     pickupNotes:
-      "Pickup from anywhere in Tricity. Zirakpur and Panchkula are closest to the Ambala road, so those pickups reach the highway soonest.",
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula are closest to the Ambala road, so those pickups reach the highway soonest. A Mohali to Mussoorie, Zirakpur to Mussoorie or Panchkula to Mussoorie trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
     faqs: [
       {
-        question: "How far is Mussoorie from Chandigarh by taxi?",
+        question: "How far is Mussoorie from Chandigarh?",
         answer:
           "About 210 km, usually five and a half to six and a half hours via Ambala, Saharanpur and Dehradun, excluding stops.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Mussoorie?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
       },
       {
         question: "Is a Chandigarh to Mussoorie day trip practical?",

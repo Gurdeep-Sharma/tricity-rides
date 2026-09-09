@@ -280,6 +280,184 @@ export const locations: LocationPage[] = [
     priority: 3,
     prefill: { pickup: "Zirakpur" },
   },
+
+  // ------------------------------------------------------------- Panchkula
+  {
+    slug: "panchkula-taxi",
+    city: "Panchkula",
+    navLabel: "Panchkula",
+    h1: "Taxi Service in Panchkula",
+    heroSubtitle:
+      "Cabs from Panchkula, on the Kalka road and closest to the hill routes.",
+    summary:
+      "Pre-booked taxis from Panchkula, the Haryana corner of Tricity where the Kalka and Shimla road begins.",
+    pickupAreas: [
+      "Sectors 1 to 21",
+      "Mansa Devi Complex (MDC)",
+      "Panchkula Extension and Sector 25",
+      "Pinjore and Kalka",
+      "Chandimandir and the Barwala road",
+      "Zirakpur–Panchkula highway",
+    ],
+    overview: [
+      "Panchkula sits at the Haryana end of Tricity, directly on the road that climbs to Kalka, Parwanoo and Shimla. For anything heading into the hills, a Panchkula pickup starts closer to the climb than a Chandigarh one does, and the fare is quoted for that shorter run rather than assuming a Sector 17 start.",
+      "The sector grid here is compact and easy to plan pickups around, though MDC and the Panchkula Extension sectors sit further out towards the Barwala side. Pinjore and Kalka are effectively on the way for hill routes, so a pickup there costs almost nothing in detour.",
+      "Morni Hills is the one destination people ask about that is closer to Panchkula than to anywhere else in Tricity. It is a short run rather than an outstation trip, and it is usually booked as a local full-day hire.",
+    ],
+    commonTrips: [
+      {
+        label: "Panchkula to Shimla",
+        detail:
+          "The Kalka road starts here, so this is among the quickest departures in Tricity for the route.",
+      },
+      {
+        label: "Panchkula to Kasauli",
+        detail:
+          "Close enough for a relaxed day trip, with the cab waiting while you walk the Mall.",
+      },
+      {
+        label: "Panchkula to Kufri",
+        detail:
+          "The Shimla run continued another 15 km, usually booked as one trip with Shimla.",
+      },
+      {
+        label: "Panchkula to Chandigarh Airport",
+        detail:
+          "The airport sits on the Mohali side, so we plan the pickup time around your flight rather than a fixed slot.",
+      },
+    ],
+    routeSlugs: [
+      "chandigarh-to-shimla-taxi",
+      "chandigarh-to-kasauli-taxi",
+      "chandigarh-to-kufri-taxi",
+      "chandigarh-to-dehradun-taxi",
+    ],
+    faqs: [
+      {
+        question: "Can I book a Shimla taxi from Panchkula?",
+        answer:
+          "Yes. Panchkula is on the Kalka road, so it is one of the quickest starts in Tricity for the Shimla route. It is the same journey and the same booking, quoted from your Panchkula address.",
+      },
+      {
+        question: "Is a Panchkula pickup cheaper than a Chandigarh one for hill routes?",
+        answer:
+          "For routes towards Kalka, Kasauli and Shimla the drive from Panchkula is shorter, and the quote reflects the distance actually travelled rather than a fixed city-centre start.",
+      },
+      {
+        question: "Which parts of Panchkula do you pick up from?",
+        answer:
+          "Sectors 1 to 21, Mansa Devi Complex, the Panchkula Extension sectors, Pinjore, Kalka, Chandimandir and the Barwala road side.",
+      },
+      {
+        question: "Do you cover Pinjore and Kalka?",
+        answer:
+          "Yes. Both are on the way for hill routes, so a pickup there adds almost nothing to the drive and is included in the quoted trip.",
+      },
+      {
+        question: "Is Panchkula pickup charged separately?",
+        answer:
+          "No. Pickup from your Panchkula address is part of the quoted trip on our outstation routes.",
+      },
+    ],
+    relatedSlugs: ["chandigarh-taxi", "zirakpur-taxi", "chandigarh-to-shimla-taxi"],
+    seo: {
+      title: "Taxi Service in Panchkula | Hill Routes",
+      description:
+        "Book a taxi in Panchkula for Shimla, Kasauli, Kufri or Chandigarh Airport. Pickup from Sectors 1–21, MDC, Pinjore and Kalka with a confirmed quote.",
+    },
+    active: true,
+    priority: 4,
+    prefill: { pickup: "Panchkula" },
+  },
+
+  // ---------------------------------------------------------------- Kharar
+  {
+    slug: "kharar-taxi",
+    city: "Kharar",
+    navLabel: "Kharar",
+    h1: "Taxi Service in Kharar",
+    heroSubtitle:
+      "Cabs from Kharar, already on the Ludhiana and Ropar highways.",
+    summary:
+      "Pre-booked taxis from Kharar, the western edge of Tricity and the closest start to Punjab and the Kangra routes.",
+    pickupAreas: [
+      "Sunny Enclave",
+      "Desu Majra and Landran road",
+      "Kurali road and Gillco Valley",
+      "Chandigarh–Kharar highway",
+      "Sectors 125 to 127",
+      "Balongi side",
+    ],
+    overview: [
+      "Kharar sits on the western edge of Tricity, where the Ludhiana and Ropar highways begin. That makes it the closest start in Tricity for anything heading into Punjab or up towards Kangra, and a departure from here skips Chandigarh traffic entirely.",
+      "For Amritsar and Jalandhar the Ludhiana highway is reached almost immediately. For Dalhousie, Palampur and Chamba the route runs through Ropar, which is also on the Kharar side, so the first hour of those long drives is saved compared with a city-centre pickup.",
+      "The area has grown quickly with housing societies along Sunny Enclave, Gillco and the Kurali road, so we plan pickups by society and gate rather than a general address. It saves the usual phone calls on the morning of travel.",
+    ],
+    commonTrips: [
+      {
+        label: "Kharar to Amritsar",
+        detail:
+          "Straight onto the Ludhiana highway, which makes this among the quickest Amritsar starts in Tricity.",
+      },
+      {
+        label: "Kharar to Dalhousie and Chamba",
+        detail:
+          "The Ropar road begins here, saving the first stretch of an already long drive.",
+      },
+      {
+        label: "Kharar to Dharamshala",
+        detail:
+          "The Una and Kangra route runs the same way, out through Ropar.",
+      },
+      {
+        label: "Kharar to Chandigarh Airport",
+        detail:
+          "A straightforward run across the Mohali side, planned around your flight time.",
+      },
+    ],
+    routeSlugs: [
+      "chandigarh-to-amritsar-taxi",
+      "chandigarh-to-dalhousie-taxi",
+      "chandigarh-to-dharamshala-taxi",
+      "chandigarh-to-palampur-taxi",
+    ],
+    faqs: [
+      {
+        question: "Can I book an outstation taxi from Kharar?",
+        answer:
+          "Yes. Kharar is one of our standard pickup areas, and for Punjab and Kangra routes it is the closest start in Tricity. It is the same trip, quoted from your Kharar address.",
+      },
+      {
+        question: "Is a Kharar pickup quicker for Amritsar?",
+        answer:
+          "Usually, yes. The Ludhiana highway is reached almost immediately from Kharar, so the drive avoids crossing Chandigarh traffic first.",
+      },
+      {
+        question: "Which parts of Kharar do you pick up from?",
+        answer:
+          "Sunny Enclave, Desu Majra, the Landran and Kurali roads, Gillco Valley, Sectors 125 to 127, Balongi and along the Chandigarh–Kharar highway.",
+      },
+      {
+        question: "Do you pick up from housing societies in Kharar?",
+        answer:
+          "Yes, and it helps to share the society and gate name when you enquire so the driver reaches the right entrance without calling.",
+      },
+      {
+        question: "Is Kharar pickup charged separately?",
+        answer:
+          "No. Pickup from your Kharar address is part of the quoted trip on our outstation routes.",
+      },
+    ],
+    relatedSlugs: ["mohali-taxi", "chandigarh-taxi", "chandigarh-to-amritsar-taxi"],
+    seo: {
+      title: "Taxi Service in Kharar | Outstation Cabs",
+      description:
+        "Book a taxi in Kharar for Amritsar, Dalhousie, Dharamshala or Chandigarh Airport. Pickup from Sunny Enclave, Desu Majra and Kurali road.",
+    },
+    active: true,
+    priority: 5,
+    prefill: { pickup: "Kharar" },
+  },
 ];
 
 export const activeLocations = locations

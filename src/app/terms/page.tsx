@@ -60,7 +60,27 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-xl font-semibold text-primary">4. Changes and cancellation</h2>
+              <h2 className="text-xl font-semibold text-primary">4. Pickup points</h2>
+              <p className="leading-relaxed">
+                Your fare is quoted from the address where the trip starts, not from a fixed
+                city-centre point. A trip beginning in Zirakpur, Panchkula, Mohali or Kharar
+                is quoted for that journey rather than assuming a Chandigarh start.
+              </p>
+              <p className="leading-relaxed">
+                Additional pickup points are included in the quoted fare when they are on the
+                route the trip is already taking, or within 5 km of it. A pickup needing a
+                longer detour is quoted as additional kilometres, and that amount is written
+                into your quote before you confirm rather than added afterwards.
+              </p>
+              <p className="leading-relaxed">
+                On round trips, drop-offs mirror the pickups. If we collect from two addresses
+                on the way out, we return to both. Waiting time at an additional pickup counts
+                toward the waiting limit agreed for your trip.
+              </p>
+            </section>
+
+            <section className="space-y-2">
+              <h2 className="text-xl font-semibold text-primary">5. Changes and cancellation</h2>
               <p className="leading-relaxed">
                 {businessConfig.policies.cancellation} Please tell us as early as possible
                 if your plans change, so we can adjust or release the vehicle.
@@ -68,7 +88,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-xl font-semibold text-primary">5. Travel conditions</h2>
+              <h2 className="text-xl font-semibold text-primary">6. Travel conditions</h2>
               <p className="leading-relaxed">
                 Distances and journey times shown on this website are approximate. Actual
                 travel time varies with traffic, weather, road works and road closures,
@@ -78,7 +98,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-xl font-semibold text-primary">6. Your responsibilities</h2>
+              <h2 className="text-xl font-semibold text-primary">7. Your responsibilities</h2>
               <p className="leading-relaxed">
                 Please give accurate trip details, including pickup address, passenger
                 numbers and luggage, and be ready at the agreed pickup time. Vehicle
@@ -88,7 +108,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-xl font-semibold text-primary">7. Limitation of liability</h2>
+              <h2 className="text-xl font-semibold text-primary">8. Limitation of liability</h2>
               <p className="leading-relaxed">
                 We take reasonable care in arranging your trip. To the extent permitted by
                 law, we are not liable for indirect or consequential losses, including
@@ -98,7 +118,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-xl font-semibold text-primary">8. Contact</h2>
+              <h2 className="text-xl font-semibold text-primary">9. Contact</h2>
               <p className="leading-relaxed">
                 For questions about these terms, contact us at{" "}
                 <a
