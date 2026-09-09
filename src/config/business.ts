@@ -77,7 +77,18 @@ export const businessConfig = {
   social: {
     instagram: "",
     facebook: "",
+    /** Google Business Profile URL. Fill in once the listing is verified —
+     *  it is the strongest sameAs signal a local business has. */
+    googleBusinessProfile: "",
   },
+  /**
+   * Approximate coordinates of the operating base, for LocalBusiness geo.
+   * Currently central Chandigarh. Replace with the real base once decided;
+   * Google treats this as where the business is, not where it travels.
+   */
+  geo: { latitude: 30.7333, longitude: 76.7794 },
+  /** Machine-readable form of hours.label, for openingHoursSpecification. */
+  hoursSpec: { opens: "07:00", closes: "22:00" },
   pricing: {
     /**
      * Rupee amounts are hidden site-wide until commercial pricing is approved.

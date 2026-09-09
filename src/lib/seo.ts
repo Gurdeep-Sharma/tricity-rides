@@ -70,6 +70,13 @@ const areaServed = businessConfig.serviceAreas.map((area) => ({
  * Deliberately contains no aggregateRating, review or price information,
  * because none of those exist yet and schema must match the visible page.
  */
+/** Verified external profiles. Empty entries are dropped. */
+const sameAs = [
+  businessConfig.social.googleBusinessProfile,
+  businessConfig.social.instagram,
+  businessConfig.social.facebook,
+].filter((url) => url.trim().length > 0);
+
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -93,6 +100,33 @@ export function organizationJsonLd() {
       "One-way and round-trip cabs",
       "Local taxi hire in Chandigarh Tricity",
     ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: businessConfig.geo.latitude,
+      longitude: businessConfig.geo.longitude,
+    },
+    // Mirrors businessConfig.hours.label. Enquiries are answered on these
+    // hours; nothing here claims round-the-clock availability.
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: businessConfig.hoursSpec.opens,
+        closes: businessConfig.hoursSpec.closes,
+      },
+    ],
+    logo: absoluteUrl("/web-app-manifest-512x512.png"),
+    image: absoluteUrl("/opengraph-image"),
+    // Only profiles that actually exist. An empty sameAs is worse than none.
+    ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }
 

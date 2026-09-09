@@ -14,6 +14,10 @@ import haridwarPhoto from "@/assets/images/haridwar.webp";
 import rishikeshPhoto from "@/assets/images/rishikesh.webp";
 import jaipurPhoto from "@/assets/images/jaipur.webp";
 import kasauliPhoto from "@/assets/images/kasauli.webp";
+import kufriPhoto from "@/assets/images/kufri.webp";
+import dalhousiePhoto from "@/assets/images/dalhausie.webp";
+import palampurPhoto from "@/assets/images/palampur.webp";
+import chambaPhoto from "@/assets/images/chamba.webp";
 
 export interface RouteData extends BasePage {
   origin: string;
@@ -140,9 +144,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-dharamshala-taxi",
     ],
     seo: {
-      title: "Chandigarh to Shimla Taxi | One-Way & Round-Trip Cabs",
+      title: "Chandigarh to Shimla Taxi | One-Way Cabs",
       description:
-        "Book a Chandigarh to Shimla taxi for one-way or round-trip travel. Pickup from Chandigarh, Mohali or Zirakpur, clear inclusions and a confirmed quote on WhatsApp.",
+        "Book a Chandigarh to Shimla taxi, one-way or round-trip. About 115 km, pickup across Tricity, fare confirmed in writing before you book.",
     },
     active: true,
     priority: 1,
@@ -228,9 +232,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-delhi-taxi",
     ],
     seo: {
-      title: "Chandigarh to Manali Taxi | Private Cab via Mandi & Kullu",
+      title: "Chandigarh to Manali Taxi | Round-Trip",
       description:
-        "Book a Chandigarh to Manali taxi for one-way or round-trip travel, including overnight departures. Pickup across Tricity and a confirmed quote from Tricity Rides.",
+        "Book a Chandigarh to Manali taxi, one-way or round-trip, including overnight departures. Pickup across Tricity with a confirmed fare.",
     },
     active: true,
     priority: 2,
@@ -316,9 +320,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-amritsar-taxi",
     ],
     seo: {
-      title: "Chandigarh to Delhi Taxi | Airport & City Drops",
+      title: "Chandigarh to Delhi Taxi | One-Way Drops",
       description:
-        "Book a Chandigarh to Delhi taxi for one-way or return travel, including IGI Airport terminal drops. Pickup across Tricity with a confirmed quote from Tricity Rides.",
+        "Book a Chandigarh to Delhi taxi for a one-way drop or return, including IGI terminal drops. Pickup across Tricity, fare confirmed first.",
     },
     active: true,
     priority: 3,
@@ -403,7 +407,7 @@ export const routes: RouteData[] = [
       "outstation-taxi-chandigarh",
     ],
     seo: {
-      title: "Chandigarh to Amritsar Taxi | Golden Temple & Wagah Trips",
+      title: "Chandigarh to Amritsar Taxi | Day Trips",
       description:
         "Book a Chandigarh to Amritsar taxi for a drop, same-day return or overnight trip covering the Golden Temple and Wagah. Confirmed quote and WhatsApp support.",
     },
@@ -490,9 +494,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-shimla-taxi",
     ],
     seo: {
-      title: "Chandigarh to Dharamshala Taxi | McLeod Ganj Cabs",
+      title: "Chandigarh to Dharamshala Taxi",
       description:
-        "Book a Chandigarh to Dharamshala or McLeod Ganj taxi, one-way or round-trip. Pickup from Chandigarh, Mohali and Zirakpur with a confirmed quote from Tricity Rides.",
+        "Book a Chandigarh to Dharamshala or McLeod Ganj taxi, one-way or round-trip. Pickup across Tricity with the fare confirmed before you book.",
     },
     active: true,
     priority: 5,
@@ -577,9 +581,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-delhi-taxi",
     ],
     seo: {
-      title: "Chandigarh to Dehradun Taxi | Dehradun & Mussoorie Cabs",
+      title: "Chandigarh to Dehradun Taxi | Mussoorie",
       description:
-        "Book a Chandigarh to Dehradun taxi for one-way or return travel, with Mussoorie and Jolly Grant Airport drops. Confirmed quote and WhatsApp support from Tricity Rides.",
+        "Book a Chandigarh to Dehradun taxi, with Mussoorie and Jolly Grant Airport drops. Pickup across Tricity and a fare confirmed in writing.",
     },
     active: true,
     priority: 6,
@@ -664,7 +668,7 @@ export const routes: RouteData[] = [
       "outstation-taxi-chandigarh",
     ],
     seo: {
-      title: "Chandigarh to Haridwar Taxi | Har Ki Pauri Trips",
+      title: "Chandigarh to Haridwar Taxi | Ganga Aarti",
       description:
         "Book a Chandigarh to Haridwar taxi planned around the evening Ganga Aarti. One-way or round-trip, pickup across Tricity, confirmed quote from Tricity Rides.",
     },
@@ -751,7 +755,7 @@ export const routes: RouteData[] = [
       "outstation-taxi-chandigarh",
     ],
     seo: {
-      title: "Chandigarh to Rishikesh Taxi | One-Way & Round-Trip Cabs",
+      title: "Chandigarh to Rishikesh Taxi | Cab Booking",
       description:
         "Book a Chandigarh to Rishikesh taxi for camps, ashrams, rafting or a Char Dham start. Pickup across Tricity and a confirmed quote from Tricity Rides.",
     },
@@ -838,9 +842,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-amritsar-taxi",
     ],
     seo: {
-      title: "Chandigarh to Jaipur Taxi | Long-Distance Private Cab",
+      title: "Chandigarh to Jaipur Taxi | Multi-Day Cabs",
       description:
-        "Book a Chandigarh to Jaipur taxi as a one-way drop or multi-day round trip. Pickup across Tricity, driver allowance stated upfront, confirmed quote from Tricity Rides.",
+        "Book a Chandigarh to Jaipur taxi as a one-way drop or multi-day round trip. Driver allowance stated upfront, fare confirmed before you book.",
     },
     active: true,
     priority: 9,
@@ -925,13 +929,464 @@ export const routes: RouteData[] = [
       "chandigarh-to-manali-taxi",
     ],
     seo: {
-      title: "Chandigarh to Kasauli Taxi | Day Trip & Drop Cabs",
+      title: "Chandigarh to Kasauli Taxi | Day Trip Cabs",
       description:
-        "Book a Chandigarh to Kasauli taxi as a day trip with waiting or a one-way drop. Pickup from Chandigarh, Mohali, Zirakpur and Panchkula. Confirmed quote from Tricity Rides.",
+        "Book a Chandigarh to Kasauli taxi as a day trip with waiting or a one-way drop. Pickup from Chandigarh, Mohali, Zirakpur and Panchkula.",
     },
     active: true,
     priority: 10,
     prefill: { pickup: "Chandigarh", destination: "Kasauli" },
+  },
+
+  // ----------------------------------------------------------------- Kufri
+  {
+    slug: "chandigarh-to-kufri-taxi",
+    image: {
+      src: kufriPhoto,
+      alt: "A hill road above Kufri winding past deodar forest, with the snow line on the ridges beyond",
+    },
+    motif: "snow-peaks",
+    origin: "Chandigarh",
+    destination: "Kufri",
+    destinationState: "Himachal Pradesh",
+    displayName: "Chandigarh to Kufri",
+    h1: "Chandigarh to Kufri Taxi",
+    heroSubtitle:
+      "The snow point above Shimla, usually booked as a day out or added to a Shimla trip.",
+    distanceKm: 130,
+    durationHours: { min: 4, max: 5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Kufri sits about 15 km beyond Shimla on NH-5, roughly 130 km from Tricity in total. The drive follows the Shimla road through Kalka, Solan and Kandaghat, then continues past Shimla town towards Theog.",
+      "Almost nobody books Kufri on its own. It is normally the second half of a Shimla trip, or a day where you leave Tricity early, spend the middle of the day at Kufri and Mahasu Peak, and come back down through Shimla in the evening.",
+      "It is best known as the closest place to Tricity where you are likely to find snow in winter, which is exactly why it fills up between December and February and on every long weekend.",
+    ],
+    highlights: [
+      "About 130 km, roughly 15 km past Shimla",
+      "Typical drive time 4–5 hours each way",
+      "Usually combined with Shimla in one trip",
+      "The nearest reliable snow point to Tricity in winter",
+    ],
+    travelNotes: [
+      "Vehicles are not allowed all the way up to Mahasu Peak. Cabs park below and the last stretch is covered on foot, on horseback or by the local vehicles that operate there.",
+      "In heavy snow the road beyond Shimla can be restricted or closed at short notice, and chains may be required. We will tell you what the road is doing rather than set out and turn back.",
+      "Weekends and the winter holidays are genuinely crowded, and the Shimla bypass can add an hour in each direction. An early start makes a real difference.",
+      "Most people pair Kufri with Shimla, and often with the Green Valley viewpoint on the way. Tell us the stops you want and they go into the itinerary.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula sit closest to the Kalka road, so those pickups reach the hills first.",
+    faqs: [
+      {
+        question: "How far is Kufri from Chandigarh by taxi?",
+        answer:
+          "About 130 km, usually four to five hours each way. Kufri is roughly 15 km beyond Shimla, so it is the Shimla drive plus a short climb.",
+      },
+      {
+        question: "Can I do Chandigarh to Kufri in a day?",
+        answer:
+          "Yes, and most people do. Leave Tricity early, spend the middle of the day at Kufri, and return through Shimla the same evening on a round trip with the cab waiting.",
+      },
+      {
+        question: "Will I see snow at Kufri?",
+        answer:
+          "Snow is most likely between December and February, but it depends on the season and we cannot promise it. We can tell you what the road and weather are doing when you book.",
+      },
+      {
+        question: "Can the taxi go up to Mahasu Peak?",
+        answer:
+          "No. Private vehicles stop below and the last stretch is done on foot, on horseback or in the local vehicles licensed for it. The cab waits at the parking area.",
+      },
+      {
+        question: "Can we visit Shimla and Kufri on the same trip?",
+        answer:
+          "Yes, that is the usual booking. Mention it when you enquire and both are written into the itinerary along with any stops you want on the way.",
+      },
+      {
+        question: "What does a Chandigarh to Kufri cab cost?",
+        answer:
+          "It depends on the vehicle, the season and whether you want a drop or a full day with waiting. We confirm the fare in writing before you book.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-shimla-taxi",
+      "chandigarh-to-kasauli-taxi",
+      "outstation-taxi-chandigarh",
+    ],
+    seo: {
+      title: "Chandigarh to Kufri Taxi | Day Trip Cabs",
+      description:
+        "Book a Chandigarh to Kufri taxi as a day trip or with Shimla. About 130 km, pickup across Tricity, confirmed fare before you book.",
+    },
+    active: true,
+    priority: 11,
+    prefill: { pickup: "Chandigarh", destination: "Kufri" },
+  },
+
+  // ------------------------------------------------------------- Dalhousie
+  {
+    slug: "chandigarh-to-dalhousie-taxi",
+    image: {
+      src: dalhousiePhoto,
+      alt: "A colonial-era building among deodars on the road into Dalhousie, with forested ridges falling away behind",
+    },
+    motif: "hill-town",
+    origin: "Chandigarh",
+    destination: "Dalhousie",
+    destinationState: "Himachal Pradesh",
+    displayName: "Chandigarh to Dalhousie",
+    h1: "Chandigarh to Dalhousie Taxi",
+    heroSubtitle:
+      "A long single-day drive to the Chamba-district hill station, usually booked as a multi-day round trip.",
+    distanceKm: 320,
+    durationHours: { min: 7, max: 8.5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Dalhousie is about 320 km from Tricity and usually takes seven to eight and a half hours. The route runs through Ropar, Hoshiarpur and Pathankot on reasonable highway, then climbs the last stretch through Banikhet.",
+      "Because most of the distance is plains highway and only the final hour is hill road, the drive is less tiring than the mileage suggests. It is still a full day, so an early departure matters more here than on the shorter hill routes.",
+      "The town spreads across five hills and was built as a colonial hill station, which is why it feels more like a set of quiet wooded neighbourhoods than a single high street. Khajjiar, about 22 km further on, is the usual second day.",
+    ],
+    highlights: [
+      "About 320 km, typically 7–8.5 hours",
+      "Mostly highway with the climb only in the last hour",
+      "Khajjiar is about 22 km further on",
+      "Better as a two or three day round trip than a same-day return",
+    ],
+    travelNotes: [
+      "A same-day return is not practical. Seven to eight and a half hours each way makes a fourteen hour minimum on the road, so almost everyone books at least one night.",
+      "Multi-day round trips include a driver allowance for the nights away. It is stated in the quote before you confirm rather than added afterwards.",
+      "Khajjiar and the Chamba valley are the usual additions. Both are short drives from Dalhousie and are easier to fit in on a second day.",
+      "The town is spread across several hills, so a vehicle for local running is genuinely useful once you arrive, unlike a compact town such as Kasauli.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Mohali and Kharar sit closest to the Ropar road and reach the highway soonest, which helps on a long day.",
+    faqs: [
+      {
+        question: "How far is Dalhousie from Chandigarh by taxi?",
+        answer:
+          "About 320 km, usually seven to eight and a half hours by road via Ropar, Hoshiarpur, Pathankot and Banikhet, excluding stops.",
+      },
+      {
+        question: "Can I do Chandigarh to Dalhousie and back in one day?",
+        answer:
+          "We do not recommend it. It is seven to eight and a half hours each way, so a same-day return means fourteen hours or more on the road. Most people stay at least one night.",
+      },
+      {
+        question: "Can we add Khajjiar to the trip?",
+        answer:
+          "Yes, it is about 22 km from Dalhousie and is the most common addition, usually on the second day. Mention it when you enquire so it is in the itinerary.",
+      },
+      {
+        question: "Which vehicle suits the Dalhousie route?",
+        answer:
+          "Most of the distance is highway, so a sedan is comfortable for two or three people. Families and groups usually prefer an SUV for the luggage and the hill section.",
+      },
+      {
+        question: "Is a driver allowance charged for a Dalhousie round trip?",
+        answer:
+          "Yes, for multi-day round trips. The amount is written into your quote before you confirm, along with everything else that is included.",
+      },
+      {
+        question: "Do you pick up from Chandigarh Airport for Dalhousie?",
+        answer:
+          "Yes. Airport pickups are standard on this route, and the Mohali side of the Tricity is closest to the road out towards Ropar.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-chamba-taxi",
+      "chandigarh-to-dharamshala-taxi",
+      "outstation-taxi-chandigarh",
+    ],
+    seo: {
+      title: "Chandigarh to Dalhousie Taxi | Round-Trip",
+      description:
+        "Book a Chandigarh to Dalhousie taxi, about 320 km via Pathankot. Add Khajjiar, pickup across Tricity, fare confirmed before you book.",
+    },
+    active: true,
+    priority: 12,
+    prefill: { pickup: "Chandigarh", destination: "Dalhousie" },
+  },
+
+  // -------------------------------------------------------------- Palampur
+  {
+    slug: "chandigarh-to-palampur-taxi",
+    image: {
+      src: palampurPhoto,
+      alt: "Tea gardens on the slopes below Palampur with the Dhauladhar range rising behind them",
+    },
+    motif: "valley",
+    origin: "Chandigarh",
+    destination: "Palampur",
+    destinationState: "Himachal Pradesh",
+    displayName: "Chandigarh to Palampur",
+    h1: "Chandigarh to Palampur Taxi",
+    heroSubtitle:
+      "The tea-garden town below the Dhauladhar, on the same road as Dharamshala.",
+    distanceKm: 255,
+    durationHours: { min: 6, max: 7 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Palampur is about 255 km from Tricity, usually six to seven hours by road. The common route runs through Ropar, Una and Hamirpur into the Kangra valley, with the last stretch through Baijnath.",
+      "It sits among working tea gardens with the Dhauladhar range directly behind it, which is what most people come for. The town itself is small and the interesting parts are spread through the surrounding valley rather than concentrated on one street.",
+      "Because it is about 35 km from Dharamshala, Palampur is often booked as part of a Kangra valley trip rather than on its own, with Bir Billing, Baijnath and Andretta added depending on how many days you have.",
+    ],
+    highlights: [
+      "About 255 km, typically 6–7 hours",
+      "Tea gardens with the Dhauladhar range behind",
+      "Around 35 km from Dharamshala and McLeod Ganj",
+      "Bir Billing is roughly 30 km away",
+    ],
+    travelNotes: [
+      "A same-day return is possible but long, at twelve hours or more of driving. Most people book at least one night, or combine it with Dharamshala over two or three days.",
+      "Bir Billing, about 30 km away, is the usual addition for paragliding. Flying depends entirely on the weather and the operators there, which is outside our control.",
+      "Baijnath temple is roughly 16 km before Palampur on the same road, so it costs almost nothing to add as a stop.",
+      "The valley roads are narrow in places once you leave the main highway. An SUV is more comfortable for a group, though a sedan handles the route without difficulty.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Mohali and Kharar reach the Ropar road quickest, which matters on a six to seven hour drive.",
+    faqs: [
+      {
+        question: "How far is Palampur from Chandigarh by taxi?",
+        answer:
+          "About 255 km, usually six to seven hours by road through Ropar, Una and Hamirpur into the Kangra valley, excluding stops.",
+      },
+      {
+        question: "Can I visit Palampur and Dharamshala on the same trip?",
+        answer:
+          "Yes, and it is the usual booking. They are about 35 km apart, so both fit comfortably into a two or three day round trip.",
+      },
+      {
+        question: "Is a Chandigarh to Palampur day trip practical?",
+        answer:
+          "It is possible but long, with twelve hours or more of driving in a single day. An overnight stay makes the trip far more comfortable.",
+      },
+      {
+        question: "Can we add Bir Billing for paragliding?",
+        answer:
+          "Yes, it is about 30 km from Palampur. Whether flying happens on the day depends on the weather and the operators there, which is not something we can promise.",
+      },
+      {
+        question: "What does a Chandigarh to Palampur cab cost?",
+        answer:
+          "It depends on the vehicle, the number of days and whether you want a drop or a round trip. We confirm the fare in writing before you book.",
+      },
+      {
+        question: "Do you pick up from Zirakpur or Mohali for Palampur?",
+        answer:
+          "Yes. Chandigarh, Mohali, Zirakpur, Kharar and Panchkula pickups are all standard, with no separate arrangement needed.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-dharamshala-taxi",
+      "chandigarh-to-dalhousie-taxi",
+      "outstation-taxi-chandigarh",
+    ],
+    seo: {
+      title: "Chandigarh to Palampur Taxi | Kangra Valley",
+      description:
+        "Book a Chandigarh to Palampur taxi, about 255 km via Una and Hamirpur. Combine with Dharamshala, fare confirmed before you book.",
+    },
+    active: true,
+    priority: 13,
+    prefill: { pickup: "Chandigarh", destination: "Palampur" },
+  },
+
+  // ---------------------------------------------------------------- Chamba
+  {
+    slug: "chandigarh-to-chamba-taxi",
+    image: {
+      src: chambaPhoto,
+      alt: "The Chamba valley with the Ravi river below and stone temple towers among the town's rooftops",
+    },
+    motif: "valley",
+    origin: "Chandigarh",
+    destination: "Chamba",
+    destinationState: "Himachal Pradesh",
+    displayName: "Chandigarh to Chamba",
+    h1: "Chandigarh to Chamba Taxi",
+    heroSubtitle:
+      "The long run into the Ravi valley, beyond Dalhousie, planned as a multi-day trip.",
+    distanceKm: 355,
+    durationHours: { min: 8, max: 9.5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Chamba is about 355 km from Tricity and takes eight to nine and a half hours, going through Ropar, Hoshiarpur and Pathankot before the climb through Banikhet and on past Dalhousie into the Ravi valley.",
+      "It is one of the longer routes we run, and the last two hours are proper hill road. This is a trip to plan rather than decide on the morning of, and it is almost always booked with at least one night at the destination.",
+      "The town is old and known for its temple complex and the Chaugan, the open ground the town is built around. It is also the road head for Bharmour and the Manimahesh area further up the valley.",
+    ],
+    highlights: [
+      "About 355 km, typically 8–9.5 hours",
+      "Runs past Dalhousie and Khajjiar on the way",
+      "Road head for Bharmour and the upper Ravi valley",
+      "Planned as a multi-day trip, not a day return",
+    ],
+    travelNotes: [
+      "A same-day return is not realistic on this route. Sixteen hours or more of driving in a day is neither safe nor comfortable, so we plan Chamba as a multi-day trip.",
+      "Dalhousie and Khajjiar sit on the way, and most people build the trip around all three rather than driving straight through.",
+      "Multi-day round trips carry a driver allowance for the nights away, written into the quote before you confirm.",
+      "For the upper valley towards Bharmour and Manimahesh, road conditions vary a great deal by season. Tell us how far up you plan to go so we can advise on the vehicle honestly.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity, and an early start is worth arranging on this route. Mohali and Kharar reach the Ropar road quickest.",
+    faqs: [
+      {
+        question: "How far is Chamba from Chandigarh by taxi?",
+        answer:
+          "About 355 km, usually eight to nine and a half hours via Pathankot and Banikhet, excluding stops. The last two hours are hill road.",
+      },
+      {
+        question: "Can Chandigarh to Chamba be done in one day?",
+        answer:
+          "Not as a return trip. One direction in a day is fine with an early start, but a same-day return would mean sixteen hours or more of driving, which we will not plan.",
+      },
+      {
+        question: "Can we stop at Dalhousie and Khajjiar on the way?",
+        answer:
+          "Yes, both are on the route and most Chamba trips include them. Mention it when you enquire so the itinerary and the days allow for it.",
+      },
+      {
+        question: "Which vehicle is best for the Chamba route?",
+        answer:
+          "An SUV is the usual choice for the distance and the hill section, particularly with luggage or a family. A sedan is fine for two or three travellers.",
+      },
+      {
+        question: "Can the taxi continue to Bharmour or Manimahesh?",
+        answer:
+          "It depends on the season and the road, which changes year to year. Tell us how far up the valley you want to go and we will give you an honest answer on what is sensible.",
+      },
+      {
+        question: "How far in advance should I book a Chamba trip?",
+        answer:
+          "Earlier is better on this route. It is a multi-day booking with a driver committed for the whole trip, so availability is tighter than on the short hill runs.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-dalhousie-taxi",
+      "chandigarh-to-dharamshala-taxi",
+      "outstation-taxi-chandigarh",
+    ],
+    seo: {
+      title: "Chandigarh to Chamba Taxi | Multi-Day Cabs",
+      description:
+        "Book a Chandigarh to Chamba taxi, about 355 km via Pathankot and Dalhousie. Multi-day trips with the fare confirmed before you book.",
+    },
+    active: true,
+    priority: 14,
+    prefill: { pickup: "Chandigarh", destination: "Chamba" },
+  },
+
+  // ------------------------------------------------------------- Mussoorie
+  {
+    slug: "chandigarh-to-mussoorie-taxi",
+    motif: "hill-town",
+    origin: "Chandigarh",
+    destination: "Mussoorie",
+    destinationState: "Uttarakhand",
+    displayName: "Chandigarh to Mussoorie",
+    h1: "Chandigarh to Mussoorie Taxi",
+    heroSubtitle:
+      "The hill station above Dehradun, usually booked as a weekend trip from Tricity.",
+    distanceKm: 210,
+    durationHours: { min: 5.5, max: 6.5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Mussoorie is about 210 km from Tricity, usually five and a half to six and a half hours. The route runs through Ambala and Saharanpur to Dehradun, then climbs the last 35 km up the Rajpur road to the ridge.",
+      "Most of the drive is plains highway and only the final hour is hill road, which makes it an easier trip than the distance suggests. It is one of the most commonly booked weekend runs from Chandigarh.",
+      "The town is laid out along a single ridge between the Library end and Picture Palace, with Landour sitting a few kilometres higher and considerably quieter. Which end you stay at changes how much walking your trip involves.",
+    ],
+    highlights: [
+      "About 210 km, typically 5.5–6.5 hours",
+      "Mostly highway, with the climb in the final hour",
+      "Around 35 km above Dehradun",
+      "Easily combined with Dehradun, Haridwar or Rishikesh",
+    ],
+    travelNotes: [
+      "The Mall Road is closed to vehicles for part of the day. Cabs park at the Library or Picture Palace ends and the town is covered on foot between them.",
+      "Kempty Falls is the busiest stop on the route and the approach can be slow in season. Landour, a few kilometres above the town, is the quieter alternative.",
+      "May and June are peak season and the last climb can back up badly. An early start out of Tricity makes a real difference on those weekends.",
+      "Mussoorie pairs naturally with Dehradun, and with Haridwar or Rishikesh over a longer trip. Tell us the stops and they go into the itinerary.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula are closest to the Ambala road, so those pickups reach the highway soonest.",
+    faqs: [
+      {
+        question: "How far is Mussoorie from Chandigarh by taxi?",
+        answer:
+          "About 210 km, usually five and a half to six and a half hours via Ambala, Saharanpur and Dehradun, excluding stops.",
+      },
+      {
+        question: "Is a Chandigarh to Mussoorie day trip practical?",
+        answer:
+          "It is possible but long, with eleven hours or more of driving in a day. Most people book at least one night, which is what makes the trip worthwhile.",
+      },
+      {
+        question: "Can we stop at Dehradun on the way?",
+        answer:
+          "Yes, Mussoorie sits about 35 km above Dehradun, so it is directly on the route. Many trips include both, and some add Haridwar or Rishikesh.",
+      },
+      {
+        question: "Can the taxi drive on Mall Road in Mussoorie?",
+        answer:
+          "Not for part of the day. The Mall is closed to vehicles during set hours, so the cab parks at the Library or Picture Palace end while you walk the town.",
+      },
+      {
+        question: "Which vehicle suits the Mussoorie route?",
+        answer:
+          "A sedan is comfortable for two or three travellers since most of the distance is highway. Families and groups usually prefer an SUV for the luggage and the final climb.",
+      },
+      {
+        question: "What does a Chandigarh to Mussoorie cab cost?",
+        answer:
+          "It depends on the vehicle, the season and whether you want a drop or a round trip with the cab staying. We confirm the fare in writing before you book.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-dehradun-taxi",
+      "chandigarh-to-haridwar-taxi",
+      "chandigarh-to-rishikesh-taxi",
+    ],
+    seo: {
+      title: "Chandigarh to Mussoorie Taxi | Hill Cabs",
+      description:
+        "Book a Chandigarh to Mussoorie taxi, about 210 km via Dehradun. One-way or round-trip, pickup across Tricity, fare confirmed before you book.",
+    },
+    active: true,
+    priority: 15,
+    prefill: { pickup: "Chandigarh", destination: "Mussoorie" },
   },
 ];
 

@@ -34,9 +34,9 @@ import { businessConfig } from "@/config/business";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Tricity Rides | Outstation Taxi & Airport Cabs from Chandigarh",
+  title: "Outstation & Airport Taxi from Chandigarh | Tricity Rides",
   description:
-    "Pre-booked outstation taxis and airport transfers from Chandigarh, Mohali and Zirakpur. One-way and round-trip cabs to Shimla, Manali, Delhi and more, with a confirmed quote on WhatsApp.",
+    "Pre-booked outstation taxis and airport transfers from Chandigarh, Mohali and Zirakpur. One-way and round-trip cabs with a confirmed fare on WhatsApp.",
   path: "/",
 });
 

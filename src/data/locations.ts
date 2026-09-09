@@ -96,7 +96,7 @@ export const locations: LocationPage[] = [
     ],
     relatedSlugs: ["mohali-taxi", "zirakpur-taxi", "chandigarh-airport-taxi"],
     seo: {
-      title: "Taxi Service in Chandigarh | Outstation, Airport & Local Cabs",
+      title: "Taxi Service in Chandigarh | Outstation",
       description:
         "Book a taxi in Chandigarh for outstation trips, airport transfers or full-day local hire. Pickup from any sector with a confirmed quote from Tricity Rides.",
     },
@@ -184,7 +184,7 @@ export const locations: LocationPage[] = [
     ],
     relatedSlugs: ["chandigarh-taxi", "zirakpur-taxi", "chandigarh-airport-taxi"],
     seo: {
-      title: "Taxi Service in Mohali | Outstation & Airport Cabs",
+      title: "Taxi Service in Mohali | Outstation Cabs",
       description:
         "Book a taxi in Mohali for outstation travel, Chandigarh Airport transfers or corporate day hire. Pickup from Phases, Sectors, Aerocity and Kharar.",
     },
@@ -272,7 +272,7 @@ export const locations: LocationPage[] = [
     ],
     relatedSlugs: ["chandigarh-taxi", "mohali-taxi", "chandigarh-to-shimla-taxi"],
     seo: {
-      title: "Taxi Service in Zirakpur | Outstation & Airport Cabs",
+      title: "Taxi Service in Zirakpur | Airport Cabs",
       description:
         "Book a taxi in Zirakpur for Shimla, Delhi, Kasauli or Chandigarh Airport. Pickup from VIP Road, Dhakoli, Baltana and Peer Muchalla with a confirmed quote.",
     },

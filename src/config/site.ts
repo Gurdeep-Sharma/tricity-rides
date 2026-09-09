@@ -12,6 +12,8 @@ export const siteConfig = {
   locale: "en_IN",
   googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
   gaId: process.env.NEXT_PUBLIC_GA_ID || "",
+  /** Bing Webmaster Tools token, rendered as <meta name="msvalidate.01">. */
+  bingSiteVerification: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
 } as const;
 
 export function absoluteUrl(path: string): string {

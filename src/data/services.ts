@@ -101,9 +101,9 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["chandigarh-airport-taxi", "local-taxi-chandigarh"],
     seo: {
-      title: "Outstation Taxi from Chandigarh | One-Way & Round-Trip Cabs",
+      title: "Outstation Taxi from Chandigarh Tricity",
       description:
-        "Book an outstation taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi, Amritsar and more. One-way or round-trip with a confirmed quote from Tricity Rides.",
+        "Book an outstation taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi, Amritsar and more. One-way or round-trip, fare confirmed first.",
     },
     active: true,
     priority: 1,
@@ -188,7 +188,7 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["outstation-taxi-chandigarh", "local-taxi-chandigarh"],
     seo: {
-      title: "Chandigarh Airport Taxi | Airport Pickup & Drop Cabs",
+      title: "Chandigarh Airport Taxi | Pickup & Drop",
       description:
         "Pre-book a Chandigarh Airport taxi for pickup, drop or an onward transfer to Shimla, Manali or Kasauli. Driver details shared in advance by Tricity Rides.",
     },
@@ -259,7 +259,7 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["outstation-taxi-chandigarh", "chandigarh-airport-taxi"],
     seo: {
-      title: "Local Taxi in Chandigarh Tricity | Half-Day & Full-Day Hire",
+      title: "Local Taxi in Chandigarh Tricity",
       description:
         "Book a local taxi in Chandigarh, Mohali, Zirakpur or Panchkula for half-day or full-day hire with waiting included. Confirmed quote from Tricity Rides.",
     },
@@ -335,7 +335,7 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["round-trip-taxi-chandigarh", "outstation-taxi-chandigarh"],
     seo: {
-      title: "One-Way Taxi from Chandigarh | Single-Direction Drops",
+      title: "One-Way Taxi from Chandigarh | Drops",
       description:
         "Book a one-way taxi from Chandigarh, Mohali or Zirakpur to Shimla, Manali, Delhi and more. Single-direction pricing with a confirmed quote from Tricity Rides.",
     },
@@ -411,7 +411,7 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["one-way-taxi-chandigarh", "outstation-taxi-chandigarh"],
     seo: {
-      title: "Round-Trip Taxi from Chandigarh | Multi-Day Cab Hire",
+      title: "Round-Trip Taxi from Chandigarh",
       description:
         "Book a round-trip taxi from Chandigarh with the same vehicle and driver throughout, including waiting and sightseeing. Driver allowance stated upfront.",
     },

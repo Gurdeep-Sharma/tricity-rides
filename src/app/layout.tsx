@@ -40,9 +40,16 @@ export const metadata: Metadata = {
     description: siteConfig.defaultDescription,
   },
   robots: { index: true, follow: true },
-  verification: siteConfig.googleSiteVerification
-    ? { google: siteConfig.googleSiteVerification }
-    : undefined,
+  // Each entry is emitted only when its token is set, so an unconfigured
+  // engine leaves no empty meta tag behind.
+  verification: {
+    ...(siteConfig.googleSiteVerification
+      ? { google: siteConfig.googleSiteVerification }
+      : {}),
+    ...(siteConfig.bingSiteVerification
+      ? { other: { "msvalidate.01": siteConfig.bingSiteVerification } }
+      : {}),
+  },
 };
 
 export const viewport: Viewport = {

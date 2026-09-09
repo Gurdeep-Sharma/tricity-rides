@@ -16,7 +16,7 @@ import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import type { TripTypeValue } from "@/lib/validation/lead";
 
 export const metadata = buildMetadata({
-  title: "Get a Taxi Quote",
+  title: "Get a Confirmed Taxi Quote",
   description:
     "Send your trip details and get a confirmed taxi fare from Chandigarh, Mohali or Zirakpur. One-way, round-trip and airport transfers, answered on WhatsApp.",
   path: "/get-quote",
