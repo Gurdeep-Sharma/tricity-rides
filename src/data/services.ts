@@ -148,10 +148,10 @@ export const services: ServicePage[] = [
       },
     ],
     routeSlugs: [
+      "chandigarh-airport-to-amritsar-taxi",
       "chandigarh-to-shimla-taxi",
       "chandigarh-to-kasauli-taxi",
       "chandigarh-to-manali-taxi",
-      "chandigarh-to-dharamshala-taxi",
     ],
     vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
     faqs: [

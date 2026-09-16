@@ -423,9 +423,9 @@ export const routes: RouteData[] = [
       },
     ],
     relatedSlugs: [
+      "chandigarh-airport-to-amritsar-taxi",
       "chandigarh-to-delhi-taxi",
       "chandigarh-to-dharamshala-taxi",
-      "outstation-taxi-chandigarh",
     ],
     seo: {
       title: "Chandigarh to Amritsar Taxi | Day Trips",
@@ -1467,6 +1467,97 @@ export const routes: RouteData[] = [
     active: true,
     priority: 15,
     prefill: { pickup: "Chandigarh", destination: "Mussoorie" },
+  },
+
+  // ------------------------------------------- Chandigarh Airport → Amritsar
+  {
+    slug: "chandigarh-airport-to-amritsar-taxi",
+    image: {
+      src: amritsarPhoto,
+      alt: "The Golden Temple in Amritsar at sunrise, reflected in the sarovar",
+    },
+    motif: "golden-temple",
+    origin: "Chandigarh Airport",
+    destination: "Amritsar",
+    destinationState: "Punjab",
+    displayName: "Chandigarh Airport to Amritsar",
+    h1: "Chandigarh Airport to Amritsar Taxi",
+    heroSubtitle:
+      "Terminal pickup at Chandigarh Airport and a straight run to Amritsar and the Golden Temple.",
+    distanceKm: 235,
+    durationHours: { min: 4.5, max: 5.5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh Airport arrivals (IXC)",
+      "Mohali and Kharar",
+      "Chandigarh sectors",
+      "Zirakpur and Panchkula",
+    ],
+    overview: [
+      "Amritsar is about 235 km from Chandigarh Airport, usually four and a half to five and a half hours. The route leaves the airport through Mohali and Kharar onto NH-44, then runs through Ludhiana and Jalandhar, which is good highway for almost the whole distance.",
+      "This is a transfer rather than a city trip, and it is planned differently because of that. You are arriving with luggage, often on a flight that lands late, and the driver needs to be at the right terminal door at the right time rather than somewhere in the city.",
+      "Most people booking this are going to the Golden Temple, and a good number add Jallianwala Bagh next door and the Wagah border ceremony the following afternoon. Told in advance, all of that goes into the itinerary rather than being negotiated on the road.",
+    ],
+    highlights: [
+      "About 235 km, typically 4.5–5.5 hours",
+      "Pickup at the arrivals door, not a city meeting point",
+      "NH-44 highway for most of the drive",
+      "Golden Temple, Jallianwala Bagh and Wagah all fit the same trip",
+    ],
+    travelNotes: [
+      "Share your flight number when you enquire so the pickup is planned around the scheduled arrival, and tell us if the flight changes. We send the driver's name and number before the day, so you can reach them directly once you land.",
+      "Vehicles do not go right up to the Golden Temple. The cab drops at the nearest parking and the last stretch is on foot, which is short and well signposted.",
+      "The Wagah border ceremony runs in the late afternoon and the timing shifts with the season. It is about 28 km beyond Amritsar, so it works best as a second-day plan rather than squeezed onto arrival day.",
+      "Late-night landings mean a night drive on NH-44. It is a straightforward road, but tell us the flight so the driver is rested and the timing is set properly rather than assumed.",
+    ],
+    pickupNotes:
+      "Pickup is from the arrivals area at Chandigarh Airport. If your plans start in the city instead, we also pick up from Chandigarh, Mohali, Kharar, Zirakpur and Panchkula, and the fare is quoted from wherever the trip actually starts.",
+    faqs: [
+      {
+        question: "How far is Amritsar from Chandigarh Airport?",
+        answer:
+          "About 235 km, usually four and a half to five and a half hours by road via Ludhiana and Jalandhar on NH-44, excluding stops.",
+      },
+      {
+        question: "Can you pick up directly from the airport terminal?",
+        answer:
+          "Yes. Pickup is from the arrivals area at Chandigarh Airport. Share your flight number when you enquire so the timing is planned around your arrival, and we send the driver's name and number before the day.",
+      },
+      {
+        question: "Can the taxi take us to the Golden Temple?",
+        answer:
+          "It takes you as close as vehicles are allowed. The cab drops at the nearest parking area and the last stretch to the temple is a short walk, which is normal for everyone visiting.",
+      },
+      {
+        question: "Can we add the Wagah border ceremony?",
+        answer:
+          "Yes. It is about 28 km beyond Amritsar and the ceremony runs in the late afternoon, with timings that change by season. It fits best as a second-day plan, so mention it when you enquire.",
+      },
+      {
+        question: "What happens if my flight is delayed?",
+        answer:
+          "Tell us as soon as you know and we adjust the pickup. You will have the driver's number before the day, so you can also reach them directly once you land.",
+      },
+      {
+        question: "Can I book a one-way drop to Amritsar?",
+        answer:
+          "Yes, and it is common for this route since many travellers fly onward from Amritsar or continue their trip from there. A round trip with the vehicle staying is also available.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-amritsar-taxi",
+      "chandigarh-airport-taxi",
+      "outstation-taxi-chandigarh",
+    ],
+    seo: {
+      title: "Chandigarh Airport to Amritsar Taxi",
+      description:
+        "Book a taxi from Chandigarh Airport to Amritsar and the Golden Temple. About 235 km, pickup at arrivals, fare confirmed before you book.",
+    },
+    active: true,
+    priority: 16,
+    prefill: { pickup: "Chandigarh Airport", destination: "Amritsar" },
   },
 ];
 
