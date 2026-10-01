@@ -5,7 +5,13 @@ import { businessConfig } from "@/config/business";
  * Fare transparency block. No rupee amounts appear anywhere while
  * businessConfig.pricing.showStartingFares is false.
  */
-export function FareInclusions({ extraCharges = [] }: { extraCharges?: string[] }) {
+export function FareInclusions({
+  extraCharges = [],
+  included = businessConfig.fare.included,
+}: {
+  extraCharges?: string[];
+  included?: readonly string[];
+}) {
   const extras = [...businessConfig.fare.extras, ...extraCharges];
 
   return (
@@ -15,7 +21,7 @@ export function FareInclusions({ extraCharges = [] }: { extraCharges?: string[] 
           What a quote normally includes
         </h3>
         <ul className="mt-3 space-y-2.5">
-          {businessConfig.fare.included.map((item) => (
+          {included.map((item) => (
             <li key={item} className="flex gap-2.5 text-sm leading-relaxed">
               <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-secondary" />
               <span>{item}</span>

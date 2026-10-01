@@ -79,16 +79,16 @@ export const businessConfig = {
   social: {
     instagram: "",
     facebook: "",
-    /** Google Business Profile URL. Fill in once the listing is verified —
-     *  it is the strongest sameAs signal a local business has. */
-    googleBusinessProfile: "",
+    /** Google Business Profile, as its permanent Maps CID link. It is the
+     *  strongest sameAs signal a local business has. */
+    googleBusinessProfile: "https://maps.google.com/?cid=737059338762410851",
   },
   /**
    * Approximate coordinates of the operating base, for LocalBusiness geo.
-   * Currently central Chandigarh. Replace with the real base once decided;
-   * Google treats this as where the business is, not where it travels.
+   * Matches the Google Business Profile pin (Sector 77, Mohali); keep the two
+   * in step, since Google treats this as where the business is.
    */
-  geo: { latitude: 30.7333, longitude: 76.7794 },
+  geo: { latitude: 30.6953, longitude: 76.7055 },
   /** Machine-readable form of hours.label, for openingHoursSpecification. */
   hoursSpec: { opens: "07:00", closes: "22:00" },
   pricing: {

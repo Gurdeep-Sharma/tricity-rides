@@ -203,7 +203,7 @@ export function RouteLanding({ route }: { route: RouteData }) {
             description={businessConfig.pricing.explanation}
           />
           <Reveal>
-            <FareInclusions extraCharges={route.extraCharges} />
+            <FareInclusions extraCharges={route.extraCharges} included={route.fareIncluded} />
           </Reveal>
         </Container>
       </Section>

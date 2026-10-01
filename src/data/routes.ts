@@ -43,6 +43,11 @@ export interface RouteData extends BasePage {
   pickupNotes: string;
   /** Optional route-specific additions to the standard inclusions/extras. */
   extraCharges?: string[];
+  /**
+   * Replaces the standard inclusions where they do not describe the trip, e.g.
+   * a route that starts outside Tricity, so the fare block never misstates it.
+   */
+  fareIncluded?: string[];
   relatedSlugs: string[];
   /** Fallback scene, drawn in the brand palette, for routes without a photo. */
   motif: RouteMotif;
@@ -331,8 +336,8 @@ export const routes: RouteData[] = [
       },
     ],
     relatedSlugs: [
+      "delhi-airport-to-chandigarh-taxi",
       "chandigarh-to-jaipur-taxi",
-      "chandigarh-airport-taxi",
       "chandigarh-to-amritsar-taxi",
     ],
     seo: {
@@ -424,13 +429,13 @@ export const routes: RouteData[] = [
     ],
     relatedSlugs: [
       "chandigarh-airport-to-amritsar-taxi",
-      "chandigarh-to-delhi-taxi",
-      "chandigarh-to-dharamshala-taxi",
+      "chandigarh-to-jalandhar-taxi",
+      "chandigarh-to-ludhiana-taxi",
     ],
     seo: {
-      title: "Chandigarh to Amritsar Taxi | Day Trips",
+      title: "Chandigarh to Amritsar & Golden Temple Taxi, ~230 km",
       description:
-        "Book a Chandigarh to Amritsar taxi for a drop, same-day return or overnight trip covering the Golden Temple and Wagah. Confirmed quote and WhatsApp support.",
+        "Amritsar and the Golden Temple are about 230 km from Chandigarh, usually 4.5–5.5 hours. Taxi for a drop, same-day return or overnight trip with Wagah, fare confirmed first.",
     },
     active: true,
     priority: 4,
@@ -1076,9 +1081,9 @@ export const routes: RouteData[] = [
       "outstation-taxi-chandigarh",
     ],
     seo: {
-      title: "Chandigarh to Kufri Taxi | Day Trip Cabs",
+      title: "Chandigarh to Kufri Distance (~130 km) & Taxi",
       description:
-        "Book a Chandigarh to Kufri taxi as a day trip or with Shimla. About 130 km, pickup across Tricity, confirmed fare before you book.",
+        "Kufri is about 130 km from Chandigarh by road, usually 4–5 hours via Shimla. Day-trip or Shimla taxi, pickup across Tricity, fare confirmed before you book.",
     },
     active: true,
     priority: 11,
@@ -1364,9 +1369,9 @@ export const routes: RouteData[] = [
       "outstation-taxi-chandigarh",
     ],
     seo: {
-      title: "Chandigarh to Chamba Taxi | Multi-Day Cabs",
+      title: "Chandigarh to Chamba Distance (~355 km) & Taxi",
       description:
-        "Book a Chandigarh to Chamba taxi, about 355 km via Pathankot and Dalhousie. Multi-day trips with the fare confirmed before you book.",
+        "Chandigarh to Chamba is about 355 km by road, usually 8–9.5 hours via Pathankot and Dalhousie. Multi-day taxi trips, fare confirmed before you book.",
     },
     active: true,
     priority: 14,
@@ -1460,9 +1465,9 @@ export const routes: RouteData[] = [
       "chandigarh-to-rishikesh-taxi",
     ],
     seo: {
-      title: "Chandigarh to Mussoorie Taxi | Hill Cabs",
+      title: "Chandigarh to Mussoorie Distance (~210 km) & Taxi",
       description:
-        "Book a Chandigarh to Mussoorie taxi, about 210 km via Dehradun. One-way or round-trip, pickup across Tricity, fare confirmed before you book.",
+        "Mussoorie is about 210 km from Chandigarh, usually 5.5–6.5 hours via Dehradun, with Landour just above the town. One-way or round-trip taxi, fare confirmed first.",
     },
     active: true,
     priority: 15,
@@ -1551,13 +1556,461 @@ export const routes: RouteData[] = [
       "outstation-taxi-chandigarh",
     ],
     seo: {
-      title: "Chandigarh Airport to Amritsar Taxi",
+      title: "Chandigarh Airport to Golden Temple Taxi (~235 km)",
       description:
-        "Book a taxi from Chandigarh Airport to Amritsar and the Golden Temple. About 235 km, pickup at arrivals, fare confirmed before you book.",
+        "Taxi from Chandigarh Airport to the Golden Temple in Amritsar, about 235 km (4.5–5.5 hours). Pickup at arrivals, fare confirmed before you book.",
     },
     active: true,
     priority: 16,
     prefill: { pickup: "Chandigarh Airport", destination: "Amritsar" },
+  },
+
+  // -------------------------------------------------------------- Ludhiana
+  {
+    slug: "chandigarh-to-ludhiana-taxi",
+    motif: "monument",
+    origin: "Chandigarh",
+    destination: "Ludhiana",
+    destinationState: "Punjab",
+    displayName: "Chandigarh to Ludhiana",
+    h1: "Chandigarh to Ludhiana Taxi",
+    heroSubtitle:
+      "A two-hour highway run to Punjab's largest city, as a drop or a same-day return.",
+    distanceKm: 100,
+    durationHours: { min: 2, max: 2.5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Ludhiana is about 100 km from Chandigarh and usually takes two to two and a half hours. The road leaves Tricity through Kharar and runs west on the Chandigarh–Ludhiana highway, entering the city at Samrala Chowk.",
+      "Because the drive is short, this is one of the few Punjab routes where a same-day return is genuinely comfortable. A morning meeting, a family function or a hospital visit in Ludhiana, with the car waiting and you back in Tricity by evening, makes an ordinary day rather than a long one.",
+      "Where you are going inside Ludhiana matters as much as the highway. The city is large and its traffic is heavy, so a drop on the far side, towards Ferozepur Road or the railway station, can take noticeably longer than one near Samrala Chowk. That is why the fare is quoted to your actual drop address.",
+    ],
+    highlights: [
+      "About 100 km, typically 2–2.5 hours",
+      "Kharar to Samrala Chowk on the Chandigarh–Ludhiana highway",
+      "Same-day return with the car waiting is practical",
+      "Fare quoted to your actual drop point in the city",
+    ],
+    travelNotes: [
+      "City traffic inside Ludhiana is the main variable, not the highway. Allow extra time for drops across the city, particularly at office hours.",
+      "Winter fog in December and January can slow an early-morning run considerably. For a morning appointment in fog season, an earlier start or a buffer is worth it.",
+      "For a same-day return, tell us roughly how long you need in Ludhiana. It goes into the quote as waiting time, so there is nothing to settle at the end of the day.",
+      "Onward trips to Jalandhar or Amritsar continue on NH-44 from Ludhiana and can be quoted as one journey.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Mohali and Kharar are closest to the Ludhiana highway, while Zirakpur and Panchkula add some city driving at the start. A Mohali to Ludhiana, Zirakpur to Ludhiana or Panchkula to Ludhiana trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
+    faqs: [
+      {
+        question: "How far is Ludhiana from Chandigarh?",
+        answer:
+          "About 100 km, usually two to two and a half hours by road through Kharar on the Chandigarh–Ludhiana highway, excluding stops. Drops across the city can take longer in traffic.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Ludhiana?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
+      },
+      {
+        question: "Can I go to Ludhiana and come back the same day?",
+        answer:
+          "Yes. At about two hours each way it is a comfortable same-day return. The car waits for you, and the waiting time is written into the quote before you confirm.",
+      },
+      {
+        question: "Do you pick up from Chandigarh Airport for Ludhiana?",
+        answer:
+          "Yes. Share your flight number when you enquire and the pickup is planned around your arrival. The airport is on the Mohali side of Tricity, so the run out to the Ludhiana highway is short.",
+      },
+      {
+        question: "What does a Chandigarh to Ludhiana taxi cost?",
+        answer:
+          "It depends on the vehicle, your drop point in the city and whether it is a one-way drop or a same-day return. We send the fare and what it includes in writing before you book.",
+      },
+      {
+        question: "Which vehicle suits the Ludhiana route?",
+        answer:
+          "A hatchback or sedan is comfortable for two to four people on this short highway run. An SUV makes sense with more luggage or a family, and a tempo traveller for a wedding party or group.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-jalandhar-taxi",
+      "chandigarh-to-amritsar-taxi",
+      "chandigarh-to-patiala-taxi",
+    ],
+    seo: {
+      title: "Chandigarh to Ludhiana Taxi & Distance (~100 km)",
+      description:
+        "Book a Chandigarh to Ludhiana taxi, about 100 km (2–2.5 hours) via Kharar. One-way drops or same-day returns, pickup across Tricity, fare confirmed first.",
+    },
+    active: true,
+    priority: 17,
+    prefill: { pickup: "Chandigarh", destination: "Ludhiana" },
+  },
+
+  // ------------------------------------------------------------- Jalandhar
+  {
+    slug: "chandigarh-to-jalandhar-taxi",
+    motif: "monument",
+    origin: "Chandigarh",
+    destination: "Jalandhar",
+    destinationState: "Punjab",
+    displayName: "Chandigarh to Jalandhar",
+    h1: "Chandigarh to Jalandhar Taxi",
+    heroSubtitle:
+      "The quicker road into the Doaba, through Ropar and Nawanshahr rather than Ludhiana.",
+    distanceKm: 145,
+    durationHours: { min: 2.5, max: 3.5 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Jalandhar is about 145 km from Chandigarh and usually takes two and a half to three and a half hours. The quicker road does not go through Ludhiana. It runs through Kurali and Ropar, then west through Nawanshahr on NH-344A, and joins NH-44 at Phagwara for the last stretch into Jalandhar.",
+      "Going via Ludhiana is also possible, and it is the natural choice if you want to stop there on the way. It is a little longer, though, and runs through Ludhiana's city traffic, which the Nawanshahr road avoids.",
+      "The Doaba region around Jalandhar has strong family links abroad, which is why airport runs, weddings and visiting relatives are such common reasons for this trip. Phagwara, including Lovely Professional University, sits on the same road just before Jalandhar and is the same booking.",
+    ],
+    highlights: [
+      "About 145 km, typically 2.5–3.5 hours",
+      "Via Ropar and Nawanshahr, avoiding Ludhiana city traffic",
+      "Phagwara and LPU are on the way",
+      "One-way drops or round trips with the car waiting",
+    ],
+    travelNotes: [
+      "If you would rather go via Ludhiana, for a stop or a pickup there, say so when you enquire and the quote follows that route.",
+      "Drops at Jalandhar Cantonment, the railway station or any address across the city are all fine. Share the actual address, since the quote is built on it.",
+      "Winter fog across the Doaba plains can be heavy in December and January. Early-morning departures in fog season are slower, and we would rather build in time than rush.",
+      "Amritsar is about 80 km further on NH-44 and can be added as one trip.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Kharar and northern Mohali are closest to the Kurali road, which is how this route leaves Tricity. A Mohali to Jalandhar, Zirakpur to Jalandhar or Panchkula to Jalandhar trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
+    faqs: [
+      {
+        question: "How far is Jalandhar from Chandigarh?",
+        answer:
+          "About 145 km, usually two and a half to three and a half hours via Ropar, Nawanshahr and Phagwara, excluding stops.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Jalandhar?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
+      },
+      {
+        question: "Is it quicker to go to Jalandhar via Ludhiana?",
+        answer:
+          "Usually not. The road through Ropar and Nawanshahr is shorter and avoids Ludhiana's city traffic. We go via Ludhiana if you want a stop or a pickup there.",
+      },
+      {
+        question: "Can you drop at Phagwara or LPU?",
+        answer:
+          "Yes. Phagwara, including Lovely Professional University, is on the same road just before Jalandhar, so it is the same trip with a different drop point.",
+      },
+      {
+        question: "Do you pick up from Chandigarh Airport for Jalandhar?",
+        answer:
+          "Yes. Share your flight number when you enquire and the pickup is planned around your arrival rather than a guessed time.",
+      },
+      {
+        question: "What does a Chandigarh to Jalandhar taxi cost?",
+        answer:
+          "It depends on the vehicle and whether it is a one-way drop or a return. The fare and what it includes are confirmed in writing before you book.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-ludhiana-taxi",
+      "chandigarh-to-amritsar-taxi",
+      "chandigarh-to-anandpur-sahib-taxi",
+    ],
+    seo: {
+      title: "Chandigarh to Jalandhar Taxi & Distance (~145 km)",
+      description:
+        "Book a Chandigarh to Jalandhar taxi, about 145 km (2.5–3.5 hours) via Ropar and Nawanshahr. Phagwara and LPU drops too, fare confirmed before you book.",
+    },
+    active: true,
+    priority: 18,
+    prefill: { pickup: "Chandigarh", destination: "Jalandhar" },
+  },
+
+  // -------------------------------------------------------- Anandpur Sahib
+  {
+    slug: "chandigarh-to-anandpur-sahib-taxi",
+    motif: "golden-temple",
+    origin: "Chandigarh",
+    destination: "Anandpur Sahib",
+    destinationState: "Punjab",
+    displayName: "Chandigarh to Anandpur Sahib",
+    h1: "Chandigarh to Anandpur Sahib Taxi",
+    heroSubtitle:
+      "Gurdwara visits to Takht Sri Kesgarh Sahib, with Kiratpur Sahib on the way.",
+    distanceKm: 80,
+    durationHours: { min: 1.5, max: 2 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Anandpur Sahib is about 80 km from Chandigarh, usually an hour and a half to two hours. The road runs out through Kurali and Ropar on NH-205, past Kiratpur Sahib, with the town a short way beyond.",
+      "Most visits centre on Takht Sri Kesgarh Sahib, one of the five Takhts of Sikhism and the place where Guru Gobind Singh founded the Khalsa in 1699. Virasat-e-Khalsa, the museum of Sikh history in the town, can easily take a couple of hours on its own, so it is worth deciding in advance whether you want both.",
+      "Because the drive is short, a same-day return is the usual plan. Kiratpur Sahib is on the road in, and Naina Devi in Himachal is close enough to add, which turns it into a fuller day.",
+    ],
+    highlights: [
+      "About 80 km, typically 1.5–2 hours",
+      "Via Kurali and Ropar on NH-205",
+      "Kiratpur Sahib on the way, Naina Devi can be added",
+      "Comfortable as a same-day return",
+    ],
+    travelNotes: [
+      "Hola Mohalla, held around Holi each March, brings very large crowds to the town. Traffic is diverted and parking is further out, so allow extra time or plan around it.",
+      "The road up to the Naina Devi temple climbs into the hills, so it adds more time than the distance suggests. Tell us if you want it included so the day is planned properly.",
+      "Parking near the Takht is limited on busy days. The driver drops you as close as vehicles are allowed and waits at the designated parking.",
+      "Virasat-e-Khalsa keeps its own opening days and hours. Check them before you travel if the museum is part of the plan.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Kharar is already on the road towards Kurali, which is how this route leaves Tricity. A Mohali to Anandpur Sahib, Zirakpur to Anandpur Sahib or Panchkula to Anandpur Sahib trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
+    faqs: [
+      {
+        question: "How far is Anandpur Sahib from Chandigarh?",
+        answer:
+          "About 80 km, usually an hour and a half to two hours via Kurali, Ropar and Kiratpur Sahib, excluding stops.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Anandpur Sahib?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
+      },
+      {
+        question: "Can we visit Anandpur Sahib and return the same day?",
+        answer:
+          "Yes, that is the usual plan. The car waits while you visit, and the waiting time is part of the quote rather than something added at the end.",
+      },
+      {
+        question: "Can we add Kiratpur Sahib and Naina Devi?",
+        answer:
+          "Kiratpur Sahib is on the way, so stopping there adds little time. Naina Devi is a climb into the hills from nearby and makes it a longer day, so mention it when you enquire and it goes into the itinerary.",
+      },
+      {
+        question: "Is Anandpur Sahib busy during Hola Mohalla?",
+        answer:
+          "Very. The festival draws large crowds each March, with traffic diversions and parking further from the gurdwaras. If your dates fall around it, tell us and we will plan an earlier start.",
+      },
+      {
+        question: "Do you pick up from Chandigarh Airport for Anandpur Sahib?",
+        answer:
+          "Yes. Share your flight number when you enquire and the pickup is planned around your arrival.",
+      },
+      {
+        question: "What does a Chandigarh to Anandpur Sahib taxi cost?",
+        answer:
+          "It depends on the vehicle, whether it is a drop or a same-day return, and any stops you add. The fare and what it includes are confirmed in writing before you book.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-amritsar-taxi",
+      "chandigarh-to-jalandhar-taxi",
+      "chandigarh-to-ludhiana-taxi",
+    ],
+    seo: {
+      title: "Chandigarh to Anandpur Sahib Taxi (~80 km)",
+      description:
+        "Book a Chandigarh to Anandpur Sahib taxi, about 80 km (1.5–2 hours) via Ropar and Kiratpur Sahib. Same-day returns, pickup across Tricity, fare confirmed first.",
+    },
+    active: true,
+    priority: 19,
+    prefill: { pickup: "Chandigarh", destination: "Anandpur Sahib" },
+  },
+
+  // --------------------------------------------------------------- Patiala
+  {
+    slug: "chandigarh-to-patiala-taxi",
+    motif: "palace",
+    origin: "Chandigarh",
+    destination: "Patiala",
+    destinationState: "Punjab",
+    displayName: "Chandigarh to Patiala",
+    h1: "Chandigarh to Patiala Taxi",
+    heroSubtitle:
+      "Patiala and Rajpura drops through Zirakpur and Banur, one-way or with the car waiting.",
+    distanceKm: 75,
+    durationHours: { min: 1.5, max: 2 },
+    tripTypes: ["One-way", "Round-trip"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: [
+      "Chandigarh sectors",
+      "Mohali and Kharar",
+      "Zirakpur and Panchkula",
+      "Chandigarh Airport",
+    ],
+    overview: [
+      "Patiala is about 75 km from Chandigarh and usually takes an hour and a half to two hours. The road leaves Tricity through Zirakpur and runs south-west on NH-7 through Banur, so Zirakpur and Panchkula pickups get going particularly quickly.",
+      "Rajpura is on the same side of Tricity and closer, about 46 km through Zirakpur and Banur, usually just over an hour. It is booked the same way, and Rajpura and Patiala can be combined in one trip if you have stops in both.",
+      "Patiala was the capital of the old princely state, and trips here range from family visits and Punjabi University business to a day around Qila Mubarak and the Moti Bagh palace. The drive is short enough that a same-day return with the car waiting is the usual plan.",
+    ],
+    highlights: [
+      "About 75 km to Patiala, typically 1.5–2 hours",
+      "Rajpura is about 46 km on the same side of Tricity",
+      "Via Zirakpur and Banur on NH-7",
+      "Same-day returns with the car waiting",
+    ],
+    travelNotes: [
+      "The Zirakpur stretch at the start is the slowest part of the trip at peak hours. An early or mid-morning start avoids most of it.",
+      "If you have stops in both Rajpura and Patiala, tell us both when you enquire so the running is in the quote.",
+      "Winter fog on the plains can slow early departures in December and January. For a morning appointment in Patiala, allow a buffer.",
+      "For a same-day return, let us know how long you need in Patiala so the waiting time is written into the quote.",
+    ],
+    pickupNotes:
+      "Pickup from anywhere in Tricity. Zirakpur and Panchkula are closest to the Patiala road. A Mohali to Patiala, Zirakpur to Patiala or Panchkula to Patiala trip is the same journey and the same booking — the fare is quoted from where you actually start, rather than from a fixed city-centre point.",
+    faqs: [
+      {
+        question: "How far is Patiala from Chandigarh?",
+        answer:
+          "About 75 km, usually an hour and a half to two hours via Zirakpur and Banur on NH-7, excluding stops.",
+      },
+      {
+        question: "How far is Rajpura from Chandigarh?",
+        answer:
+          "About 46 km, usually just over an hour through Zirakpur and Banur. It is the same kind of booking as Patiala, only shorter.",
+      },
+      {
+        question: "Can I go to Patiala and return the same day?",
+        answer:
+          "Yes. It is a short drive, so a same-day return with the car waiting is the usual plan, with the waiting time written into the quote.",
+      },
+      {
+        question: "Do you pick up from Mohali, Zirakpur or Panchkula for Patiala or Rajpura?",
+        answer:
+          "Yes — it is the same trip, and only your pickup point changes. We pick up from Chandigarh, Mohali, Zirakpur, Panchkula and Kharar. The fare is quoted from your actual address rather than assuming a Chandigarh start, so it reflects the distance you are really travelling.",
+      },
+      {
+        question: "Do you pick up from Chandigarh Airport for Patiala?",
+        answer:
+          "Yes. Share your flight number when you enquire and the pickup is planned around your arrival.",
+      },
+      {
+        question: "What does a Chandigarh to Patiala taxi cost?",
+        answer:
+          "It depends on the vehicle, whether it is a drop or a same-day return, and whether Rajpura is on the way. The fare and what it includes are confirmed in writing before you book.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-ludhiana-taxi",
+      "chandigarh-to-delhi-taxi",
+      "chandigarh-to-anandpur-sahib-taxi",
+    ],
+    seo: {
+      title: "Chandigarh to Patiala Taxi (~75 km) & Rajpura",
+      description:
+        "Book a Chandigarh to Patiala or Rajpura taxi via Zirakpur and Banur. Patiala is about 75 km, Rajpura about 46 km. Same-day returns, fare confirmed before you book.",
+    },
+    active: true,
+    priority: 20,
+    prefill: { pickup: "Chandigarh", destination: "Patiala" },
+  },
+
+  // --------------------------------------------- Delhi Airport → Chandigarh
+  {
+    slug: "delhi-airport-to-chandigarh-taxi",
+    motif: "monument",
+    origin: "Delhi Airport",
+    destination: "Chandigarh",
+    destinationState: "Tricity",
+    displayName: "Delhi Airport to Chandigarh",
+    h1: "Delhi Airport to Chandigarh Taxi",
+    heroSubtitle:
+      "Pickup at Delhi Airport arrivals, day or night, and straight home to Chandigarh, Mohali, Zirakpur or Panchkula.",
+    distanceKm: 265,
+    durationHours: { min: 4.5, max: 5.5 },
+    tripTypes: ["One-way"],
+    vehicleSlugs: ["hatchback", "sedan", "suv", "premium-suv", "tempo-traveller"],
+    pickupAreas: ["Delhi (IGI) Airport arrivals, all terminals"],
+    overview: [
+      "Delhi Airport to Chandigarh is about 255 to 280 km depending on where in Tricity you are going, and usually takes four and a half to five and a half hours. Zirakpur is the nearest drop, with Chandigarh, Mohali and Panchkula a little further. The route is NH-44 almost the whole way, through Panipat, Karnal and Ambala.",
+      "This trip starts with a flight rather than an address, and that changes how it is planned. We ask for your flight number, set the pickup around the time you are likely to clear immigration and baggage rather than the landing time, and send you the driver's name and number before the day of travel.",
+      "International arrivals into Delhi often land late at night or in the early hours, and a night pickup is a normal booking on this route rather than a special request. A night drive on NH-44 is often the quicker version of this trip, since the traffic around Delhi and Panipat has eased.",
+    ],
+    highlights: [
+      "About 255–280 km, typically 4.5–5.5 hours",
+      "Pickup at Delhi Airport arrivals, including late-night flights",
+      "Planned around your flight number, not a guessed time",
+      "Drops across Chandigarh, Mohali, Zirakpur and Panchkula",
+    ],
+    travelNotes: [
+      "Clearing immigration, baggage and customs after an international flight can take an hour or more. Tell us whether you are on an international or domestic arrival so the pickup time is realistic.",
+      "If your flight is delayed or diverted, tell us as soon as you know and we adjust the pickup. You will already have the driver's number, so you can update them directly after landing.",
+      "Murthal is the usual meal stop on NH-44, and after a long flight many people want one. Allow thirty to forty minutes if you do.",
+      "Luggage after international travel is usually more than people expect. With several large suitcases, an SUV or larger is the safer choice.",
+      "Going further, to Kharar, Ludhiana or Jalandhar? Share the final address and the whole run is quoted as one trip.",
+    ],
+    pickupNotes:
+      "The driver meets you at arrivals at whichever Delhi Airport terminal you land at. Drops are anywhere in Chandigarh, Mohali, Zirakpur, Panchkula or Kharar, and the fare is quoted to your actual drop address.",
+    extraCharges: ["Delhi Airport parking while the driver waits for you at arrivals"],
+    fareIncluded: [
+      "Vehicle and driver for the agreed journey",
+      "Fuel for the quoted route",
+      "Pickup at Delhi Airport arrivals, planned around your flight",
+      "Drop at your address anywhere in Tricity — Chandigarh, Mohali, Zirakpur, Panchkula or Kharar",
+    ],
+    faqs: [
+      {
+        question: "How far is Chandigarh from Delhi Airport?",
+        answer:
+          "About 255 to 280 km depending on your drop in Tricity, usually four and a half to five and a half hours on NH-44, excluding stops. Zirakpur is the nearest, with Chandigarh, Mohali and Panchkula a little further.",
+      },
+      {
+        question: "Can you pick up from Delhi Airport late at night?",
+        answer:
+          "Yes. Late-night and early-morning arrivals are common on this route. Share your flight number when you enquire and the pickup is planned around it.",
+      },
+      {
+        question: "How will I find the driver at Delhi Airport?",
+        answer:
+          "You get the driver's name and number before the day of travel. Call or message them once you have your bags, and they meet you at arrivals.",
+      },
+      {
+        question: "What if my flight is delayed?",
+        answer:
+          "Tell us as soon as you know and we adjust the pickup. Because you already have the driver's number, you can also update them directly after landing.",
+      },
+      {
+        question: "Do you drop in Mohali, Zirakpur and Panchkula too?",
+        answer:
+          "Yes. Drops anywhere in Chandigarh, Mohali, Zirakpur, Panchkula or Kharar are the same booking, quoted to your actual address. Onward to Ludhiana or Jalandhar can be quoted as well.",
+      },
+      {
+        question: "What does a Delhi Airport to Chandigarh taxi cost?",
+        answer:
+          "It depends on the vehicle and your drop address in Tricity. The fare, and what it does and does not cover, such as tolls and airport parking, is confirmed in writing before you book.",
+      },
+      {
+        question: "Which vehicle suits an airport pickup with luggage?",
+        answer:
+          "For two people with normal luggage a sedan is fine. Families coming back from abroad with several large suitcases are better off in an SUV, and larger groups in a tempo traveller.",
+      },
+    ],
+    relatedSlugs: [
+      "chandigarh-to-delhi-taxi",
+      "chandigarh-to-ludhiana-taxi",
+      "chandigarh-to-jalandhar-taxi",
+    ],
+    seo: {
+      title: "Delhi Airport to Chandigarh Taxi, Mohali & Zirakpur",
+      description:
+        "Taxi from Delhi Airport (IGI) to Chandigarh, Mohali, Zirakpur or Panchkula, about 255–280 km. Late-night arrivals planned around your flight, fare confirmed first.",
+    },
+    active: true,
+    priority: 21,
+    prefill: { pickup: "Delhi Airport", destination: "Chandigarh" },
   },
 ];
 
