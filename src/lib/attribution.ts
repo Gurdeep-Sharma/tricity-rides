@@ -46,6 +46,28 @@ function safeSet(value: StoredAttribution): void {
   }
 }
 
+/**
+ * AI assistants that link to the site. Checked before search engines, because
+ * gemini.google.com would otherwise be counted as Google organic search.
+ */
+const aiAssistants: Record<string, string> = {
+  "chatgpt.com": "chatgpt",
+  "chat.openai.com": "chatgpt",
+  "perplexity.ai": "perplexity",
+  "gemini.google.com": "gemini",
+  "claude.ai": "claude",
+  "copilot.microsoft.com": "copilot",
+};
+
+/** Matches a hostname, or a bare utm_source such as "chatgpt.com", to an assistant. */
+function matchAiAssistant(hostOrSource: string): string | undefined {
+  const host = hostOrSource.toLowerCase().replace(/^www\./, "");
+  for (const [domain, name] of Object.entries(aiAssistants)) {
+    if (host === domain || host.endsWith(`.${domain}`)) return name;
+  }
+  return undefined;
+}
+
 /** Derives source/medium from the referrer when no UTM parameters are present. */
 function deriveFromReferrer(referrer: string): { source: string; medium: string } {
   if (!referrer) return { source: "direct", medium: "none" };
@@ -60,6 +82,9 @@ function deriveFromReferrer(referrer: string): { source: string; medium: string 
   if (!host || host === window.location.hostname) {
     return { source: "direct", medium: "none" };
   }
+
+  const assistant = matchAiAssistant(host);
+  if (assistant) return { source: assistant, medium: "ai" };
 
   const searchEngines: Record<string, string> = {
     "google.com": "google",
@@ -123,7 +148,10 @@ export function captureAttribution(): void {
       utmTerm: params.get("utm_term") || undefined,
       utmContent: params.get("utm_content") || undefined,
       source: utmSource || derived.source,
-      medium: params.get("utm_medium") || derived.medium,
+      // ChatGPT tags its links with utm_source=chatgpt.com and no medium.
+      medium:
+        params.get("utm_medium") ||
+        (utmSource && matchAiAssistant(utmSource) ? "ai" : derived.medium),
       campaign: params.get("utm_campaign") || undefined,
       landingPage: `${window.location.pathname}${window.location.search}`.slice(0, 500),
       referrer: referrer.slice(0, 500) || undefined,

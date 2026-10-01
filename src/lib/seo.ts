@@ -88,15 +88,19 @@ export function organizationJsonLd() {
     telephone: businessConfig.contact.phone,
     email: businessConfig.contact.email,
     areaServed,
+    // Locality only, matching the Google Business Profile. No street address
+    // is published on the site.
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Chandigarh",
-      addressRegion: "Chandigarh",
+      addressLocality: "Mohali",
+      addressRegion: "Punjab",
       addressCountry: "IN",
     },
     knowsAbout: [
       "Outstation taxi from Chandigarh",
       "Chandigarh Airport transfers",
+      "Delhi Airport to Chandigarh transfers",
+      "Taxi from Chandigarh to Punjab cities",
       "One-way and round-trip cabs",
       "Local taxi hire in Chandigarh Tricity",
     ],
@@ -127,6 +131,9 @@ export function organizationJsonLd() {
     image: absoluteUrl("/opengraph-image"),
     // Only profiles that actually exist. An empty sameAs is worse than none.
     ...(sameAs.length > 0 ? { sameAs } : {}),
+    ...(businessConfig.social.googleBusinessProfile
+      ? { hasMap: businessConfig.social.googleBusinessProfile }
+      : {}),
   };
 }
 

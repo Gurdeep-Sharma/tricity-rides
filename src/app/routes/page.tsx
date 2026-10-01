@@ -7,7 +7,7 @@ import { RouteCardGrid } from "@/components/route/RouteCard";
 import { CtaSection } from "@/components/cta/CtaSection";
 import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
 
-import { activeRoutes } from "@/data/routes";
+import { activeRoutes, formatDuration } from "@/data/routes";
 import { activeServices } from "@/data/services";
 import { activeLocations } from "@/data/locations";
 import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
@@ -52,6 +52,45 @@ export default function RoutesIndexPage() {
             description="Pickup from Chandigarh, Mohali, Zirakpur, Kharar or Panchkula on every route."
           />
           <RouteCardGrid routes={activeRoutes} />
+
+          {/* One extractable table of every route, for readers and answer
+              engines that want the numbers without opening each page. */}
+          <div className="space-y-6 pt-6">
+            <SectionHeading
+              align="left"
+              title="Distances and drive times at a glance"
+              description="Approximate road distance and driving time for every route, excluding stops. Both vary with traffic, weather and road conditions."
+            />
+            <div className="overflow-x-auto rounded-2xl border border-border bg-surface">
+              <table className="w-full min-w-[34rem] text-left text-sm">
+                <thead className="bg-muted/60 text-muted-foreground">
+                  <tr>
+                    <th scope="col" className="px-4 py-3 font-semibold">Route</th>
+                    <th scope="col" className="px-4 py-3 font-semibold">Approx. distance</th>
+                    <th scope="col" className="px-4 py-3 font-semibold">Approx. drive time</th>
+                    <th scope="col" className="px-4 py-3 font-semibold">Trip types</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {activeRoutes.map((route) => (
+                    <tr key={route.slug}>
+                      <th scope="row" className="px-4 py-3 font-medium">
+                        <Link
+                          href={`/${route.slug}`}
+                          className="text-primary underline-offset-4 hover:underline"
+                        >
+                          {route.displayName}
+                        </Link>
+                      </th>
+                      <td className="px-4 py-3 whitespace-nowrap">About {route.distanceKm} km</td>
+                      <td className="px-4 py-3 whitespace-nowrap">{formatDuration(route)}</td>
+                      <td className="px-4 py-3">{route.tripTypes.join(", ")}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </Container>
       </Section>
 

@@ -19,6 +19,11 @@ import dalhousiePhoto from "@/assets/images/dalhausie.webp";
 import palampurPhoto from "@/assets/images/palampur.webp";
 import chambaPhoto from "@/assets/images/chamba.webp";
 import mussooriePhoto from "@/assets/images/mussoorie.webp";
+import ludhianaPhoto from "@/assets/images/ludhiana_tricity.webp";
+import jalandharPhoto from "@/assets/images/jalandhar.webp";
+import anandpurSahibPhoto from "@/assets/images/anandpur_sahib_tricity.webp";
+import patialaPhoto from "@/assets/images/patiala.webp";
+import delhiAirportPhoto from "@/assets/images/delhi_airport.webp";
 
 export interface RouteData extends BasePage {
   origin: string;
@@ -1568,6 +1573,10 @@ export const routes: RouteData[] = [
   // -------------------------------------------------------------- Ludhiana
   {
     slug: "chandigarh-to-ludhiana-taxi",
+    image: {
+      src: ludhianaPhoto,
+      alt: "A white sedan taxi on a highway into the city, with green fields on one side and a red-brick clock tower above the skyline",
+    },
     motif: "monument",
     origin: "Chandigarh",
     destination: "Ludhiana",
@@ -1655,6 +1664,10 @@ export const routes: RouteData[] = [
   // ------------------------------------------------------------- Jalandhar
   {
     slug: "chandigarh-to-jalandhar-taxi",
+    image: {
+      src: jalandharPhoto,
+      alt: "A white sedan taxi on a divided city road beside an \"I love Jalandhar\" sign and statues of a cricketer and a hockey player",
+    },
     motif: "monument",
     origin: "Chandigarh",
     destination: "Jalandhar",
@@ -1742,6 +1755,10 @@ export const routes: RouteData[] = [
   // -------------------------------------------------------- Anandpur Sahib
   {
     slug: "chandigarh-to-anandpur-sahib-taxi",
+    image: {
+      src: anandpurSahibPhoto,
+      alt: "A white sedan taxi on a riverside road below a white gurdwara with a golden dome and a sandstone museum complex, with wooded hills behind",
+    },
     motif: "golden-temple",
     origin: "Chandigarh",
     destination: "Anandpur Sahib",
@@ -1834,6 +1851,10 @@ export const routes: RouteData[] = [
   // --------------------------------------------------------------- Patiala
   {
     slug: "chandigarh-to-patiala-taxi",
+    image: {
+      src: patialaPhoto,
+      alt: "A white sedan taxi on an old-city street lined with shopfronts and trees, with a domed palace-style building at the end of the road",
+    },
     motif: "palace",
     origin: "Chandigarh",
     destination: "Patiala",
@@ -1921,6 +1942,10 @@ export const routes: RouteData[] = [
   // --------------------------------------------- Delhi Airport → Chandigarh
   {
     slug: "delhi-airport-to-chandigarh-taxi",
+    image: {
+      src: delhiAirportPhoto,
+      alt: "A white sedan taxi on the approach road to a large glass airport terminal, with a plane taking off near the control tower",
+    },
     motif: "monument",
     origin: "Delhi Airport",
     destination: "Chandigarh",
